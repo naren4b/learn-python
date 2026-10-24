@@ -1,0 +1,31 @@
+# Lesson 12 DIY
+
+Use root `bash diy.sh` and write your own version in `lab/app.py`.
+
+## Pseudocode
+```text
+DEFINE a function that converts a text value to a number
+TRY to divide 100 by the number
+CATCH an invalid number
+CATCH division by zero
+ON success, show the result
+ALWAYS print a completion message
+TEST a valid number, invalid text, and zero
+```
+
+## Your Exercise
+1. Write `safe_divide(raw)` to compute `100 / int(raw)`.
+2. Catch `ValueError` and `ZeroDivisionError` separately.
+3. Use `else` to print the result on success.
+4. Use `finally` to print `"Cleanup complete"`.
+5. Call the function with `"20"`, `"abc"` and `"0"`.
+
+Optional: Raise `ValueError` yourself when input is negative.
+
+## Extended exercise (optional)
+
+1. Use `raise ValueError("Must be positive")` to reject negative input.
+2. Change one handler to `except ValueError as error` and display its message and class name.
+3. Add a general `except Exception as error` after specific handlers; explain why a bare `except:` is broader.
+4. In a separate example, use `traceback.format_exc()` inside an exception handler.
+5. Catch an exception, then use plain `raise` to re-raise it and catch it in the caller.
