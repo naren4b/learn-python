@@ -19,8 +19,8 @@ Run `python day-10/10_comprehensions.py` from the repository root.
 
 Expected output:
 ```text
-Sorted: [5, 10, 20, 30]
-Doubled: [10, 20, 40, 60]
+Sorted: [5, 5, 10, 20, 30]
+Doubled: [10, 10, 20, 40, 60]
 Above 10: [20, 30]
 Name lengths: {'api': 3, 'worker': 6}
 Unique: [5, 10, 20, 30]
