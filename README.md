@@ -31,11 +31,11 @@ If you use a different local checkout location, change only the `cd` command. No
 ## How to learn
 
 1. Open the current day's `README.md` to understand the objective and key points.
-2. Follow `diy.md` and type your own `.py` file in WSL using `vi`. Run it using local Python. Use the repository `.py` as a reference only if needed.
+2. Follow `diy.md`, create or reuse a local `app.py` in the repository root using `vi`, and run `python app.py` in WSL. Do not commit the local exercise. Use the lesson's reference `.py` only if needed.
 3. Change the program as suggested in the exercise. Save and run again. Ask questions and mark the lesson finished before the next PR is merged.
 4. Explain what changed and check the output before moving to the next day.
 
-Each day contains one short `README.md`, one short `diy.md`, one runnable reference Python file, and `requirements.txt` (with no dependencies when none are needed). Extra packages, where required, will be explained in that day's README.
+Each day contains one short `README.md`, a `diy.md` with the fixed local `app.py` workflow, one runnable reference Python file, and `requirements.txt` (with no dependencies when none are needed). Extra packages, where required, will be explained in that day's README.
 
 ## Learning path
 
