@@ -39,3 +39,7 @@ All zones: ['east', 'north', 'south', 'west']
 ```
 
 No external dependencies.
+
+## Important line notes
+
+- A tuple is immutable; sets remove duplicate zones; `&` finds common zones and `|` combines unique zones.
