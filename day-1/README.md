@@ -43,3 +43,11 @@ Program completed
 
 ## Trade-off
 Python uses indentation to mark blocks. Consistent four-space indentation matters.
+
+## Common syntax fixes
+
+- Use a comma to separate text and variables: `print("My Age is", age)`.
+- An `else` statement needs a colon: `else:`.
+- Use consistent indentation inside `if` and `else` blocks.
+
+The learner moved to the next lesson after practicing these fixes.
