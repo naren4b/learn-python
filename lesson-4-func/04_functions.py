@@ -1,6 +1,7 @@
-# Day 4: reusable functions and return values
+# Lesson 4: reusable functions and return values
 
 
+# Key step: the following statement creates or updates a value used below.
 def discounted_price(price, discount):
     return price - price * discount / 100
 
