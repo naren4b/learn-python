@@ -31,7 +31,7 @@ If you use a different local checkout location, change only the `cd` command. No
 ## How to learn
 
 1. Open the current day's `README.md` to understand the objective and key points.
-2. Follow `diy.md`, create or reuse a local `app.py` in the repository root using `vi`, and run `python app.py` in WSL. Do not commit the local exercise. Use the lesson's reference `.py` only if needed.
+2. Follow `diy.md`, create or reuse `lab/app.py` in the Git-ignored `lab/` directory using `vi`, and run `python app.py` in WSL. Do not commit the local exercise. Create `lab/` with `mkdir -p lab` before entering it. Use the lesson's reference `.py` only if needed.
 3. Change the program as suggested in the exercise. Save and run again. Ask questions and mark the lesson finished before the next PR is merged.
 4. Explain what changed and check the output before moving to the next day.
 
