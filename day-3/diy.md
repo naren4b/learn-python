@@ -1,14 +1,28 @@
 # Day 3: Do it yourself
 
-Use your ignored local practice directory in WSL:
+Use your ignored local practice directory in WSL. The commands reset both scratch files to empty.
 
 ```bash
 mkdir -p /mnt/c/code/personal/learn-python/lab
 cd /mnt/c/code/personal/learn-python/lab
-touch app.py requirements.txt
+: > app.py
+: > requirements.txt
 vi app.py
 python app.py
 ```
+
+## Pseudocode
+
+```text
+SET price, discount, stock, member
+CALCULATE discounted price
+CHECK membership AND stock availability
+CHECK whether 7 is even
+FIND remainder when 10 is divided by 3
+PRINT each result
+```
+
+## Exercise
 
 Write a program that:
 1. Sets `price = 100`, `discount = 20`, `stock = 5` and `member = True`.
