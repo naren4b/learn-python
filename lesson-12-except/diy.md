@@ -21,3 +21,11 @@ TEST a valid number, invalid text, and zero
 5. Call the function with `"20"`, `"abc"` and `"0"`.
 
 Optional: Raise `ValueError` yourself when input is negative.
+
+## Extended exercise (optional)
+
+1. Use `raise ValueError("Must be positive")` to reject negative input.
+2. Change one handler to `except ValueError as error` and display its message and class name.
+3. Add a general `except Exception as error` after specific handlers; explain why a bare `except:` is broader.
+4. In a separate example, use `traceback.format_exc()` inside an exception handler.
+5. Catch an exception, then use plain `raise` to re-raise it and catch it in the caller.
