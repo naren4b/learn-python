@@ -42,3 +42,7 @@ Done
 ```
 
 Standard library only; no external dependencies.
+
+## Important line notes
+
+- `range(1, 6)` generates 1 through 5; `count -= 1` prevents an endless countdown.
