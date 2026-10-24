@@ -31,7 +31,7 @@ If you use a different local checkout location, change only the `cd` command. No
 ## How to learn
 
 1. Open the current day's `README.md` to understand the objective and key points.
-2. Follow `diy.md`, create or reuse a local `app.py` in the repository root using `vi`, and run `python app.py` in WSL. Do not commit the local exercise. Use the lesson's reference `.py` only if needed.
+2. Follow `diy.md`, create or reuse `lab/app.py` in the Git-ignored `lab/` directory using `vi`, and run `python app.py` in WSL. Do not commit the local exercise. Create `lab/` with `mkdir -p lab` before entering it. Use the lesson's reference `.py` only if needed.
 3. Change the program as suggested in the exercise. Save and run again. Ask questions and mark the lesson finished before the next PR is merged.
 4. Explain what changed and check the output before moving to the next day.
 
@@ -41,9 +41,9 @@ Each day contains one short `README.md`, a `diy.md` with the fixed local `app.py
 
 | Day | Topic | Status |
 | --- | --- | --- |
-| [Day 0](day-0/README.md) | Setup, save and run Python | Ready to test |
-| [Day 1](day-1/README.md) | Syntax, indentation, comments and variables | In progress |
-| Day 2 | Strings, integers, floats and booleans | Planned |
+| [Day 0](day-0/README.md) | Setup, save and run Python | Completed |
+| [Day 1](day-1/README.md) | Syntax, indentation, comments and variables | Completed |
+| [Day 2](day-2/README.md) | Strings, integers, floats and booleans | In progress (PR open) |
 | Day 3+ | Operators, functions, classes, control flow, collections, files, APIs and tests | Planned |
 | Later | Easy and medium coding exercises | Planned |
 

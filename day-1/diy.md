@@ -3,7 +3,8 @@
 In WSL, use your local scratch file. Type the solution yourself.
 
 ```bash
-cd /mnt/c/code/personal/learn-python
+mkdir -p /mnt/c/code/personal/learn-python/lab
+cd /mnt/c/code/personal/learn-python/lab
 touch app.py requirements.txt
 vi app.py
 python app.py

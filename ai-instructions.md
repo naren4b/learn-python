@@ -9,7 +9,7 @@ Maintain an evergreen, public, company-independent Python learning repository at
 - Teach **one topic at a time** and wait for the learner's response before advancing.
 - Assume the learner already has programming experience. Use short, clear English and common Python syntax.
 - Explain the concept briefly, provide a working reference file and one small hands-on modification.
-- The learner should type the exercise independently in a local scratch file named `app.py` at the repository root, and consult reference code only if stuck.
+- The learner should type the exercise independently in a local scratch file named `app.py` in the ignored `lab/` directory, and consult reference code only if stuck.
 - Always print the complete current `diy.md` content directly in chat when starting or continuing a lesson.
 - Ask one useful question at a time. Correct mistakes simply. Answer doubts before moving on.
 - Capture useful questions, answers, corrections and trade-offs in the current lesson's `README.md` when they add lasting value.
@@ -36,12 +36,13 @@ Maintain an evergreen, public, company-independent Python learning repository at
 - Learner edits using `vi` in WSL, not an IDE or an editor inside the container.
 - Learner executes their own scratch file **directly in WSL** using the installed Python 3.12.3:
   ```bash
-  cd /mnt/c/code/personal/learn-python
+  mkdir -p /mnt/c/code/personal/learn-python/lab
+  cd /mnt/c/code/personal/learn-python/lab
   touch app.py requirements.txt
   vi app.py
   python app.py
   ```
-- Reuse the same local `app.py` for each lesson, and never require the learner to commit their practice files. Do not confuse the local scratch file with the tracked lesson reference `.py` file.
+- Reuse the same local `lab/app.py` for each lesson, and never require the learner to commit their practice files. Do not confuse the local scratch file with the tracked lesson reference `.py` file.
 - Do not insist on upgrading local Python during basic lessons. Do not overwrite the operating system's Python.
 - For any other reader, offer a **fully isolated Podman** path with the pinned image `docker.io/library/python:3.12.14-slim-bookworm`:
   ```bash
@@ -50,6 +51,7 @@ Maintain an evergreen, public, company-independent Python learning repository at
     python day-1/01_basics.py
   ```
 - Do not assume editors such as `vi` or `vim` exist inside the slim container.
+- Ignore `/lab/` in Git so local practice code and files never appear in commits.
 - The user has an existing local checkout. Do not create a second repository directory.
 - Install dependencies only if a lesson needs them; prefer `python -m pip` and avoid unnecessary `pip install`.
 
