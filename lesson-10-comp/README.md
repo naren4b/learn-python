@@ -15,7 +15,7 @@ Transform and filter collections with readable comprehensions.
 Comprehensions are concise for simple transformations. Prefer ordinary loops when logic becomes difficult to follow. Sorting creates a new list with `sorted()`, while `.sort()` mutates the list.
 
 ## Reference
-Run `python day-10/10_comprehensions.py` from the repository root.
+Run `python lesson-10-comp/10_comprehensions.py` from the repository root.
 
 Expected output:
 ```text
