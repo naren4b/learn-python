@@ -23,12 +23,12 @@ Use `and` when both conditions must be true. Use `or` when either condition is e
 
 ## Run reference
 ```bash
-python day-3/03_operators.py
+python lesson-3-ops/03_operators.py
 ```
 
 Or use isolated Podman:
 ```bash
-podman run --rm -v "$PWD:/work" -w /work docker.io/library/python:3.12.14-slim-bookworm python day-3/03_operators.py
+podman run --rm -v "$PWD:/work" -w /work docker.io/library/python:3.12.14-slim-bookworm python lesson-3-ops/03_operators.py
 ```
 
 Expected:
