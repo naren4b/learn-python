@@ -44,8 +44,9 @@ Each day contains one short `README.md`, a `diy.md` with the fixed local `app.py
 | [Day 0](day-0/README.md) | Setup, save and run Python | Completed |
 | [Day 1](day-1/README.md) | Syntax, indentation, comments and variables | Completed |
 | [Day 2](day-2/README.md) | Strings, integers, floats and booleans | Completed |
-| [Day 3](day-3/README.md) | Arithmetic, comparison and logical operators | In progress (PR open) |
-| Day 4+ | Functions, classes, control flow, collections, files, APIs and tests | Planned |
+| [Day 3](day-3/README.md) | Arithmetic, comparison and logical operators | Completed |
+| [Day 4](day-4/README.md) | Functions and return values | In progress (PR open) |
+| Day 5+ | Classes, control flow, collections, files, APIs and tests | Planned |
 | Later | Easy and medium coding exercises | Planned |
 
 Practice one topic at a time. The maintainer prepares reference code and documentation on a task branch. Learners do not need to commit their practice code. Lessons are merged to `main` once completed and reviewed.
