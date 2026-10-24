@@ -26,7 +26,7 @@ Lists keep insertion order and allow changes; finding a value typically scans it
 See [diy.md](diy.md). From the repository root use `bash diy.sh` to start local practice; reference: [06_lists.py](06_lists.py).
 
 ```bash
-python day-6/06_lists.py
+python lesson-6-lists/06_lists.py
 ```
 
 Expected:
