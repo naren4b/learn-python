@@ -10,7 +10,7 @@ Maintain an evergreen, public, company-independent Python learning repository at
 - Assume the learner already has programming experience. Use short, clear English and common Python syntax.
 - Explain the concept briefly, provide a working reference file and one small hands-on modification.
 - The learner should type the exercise independently in a local scratch file named `app.py` in the ignored `lab/` directory, and consult reference code only if stuck.
-- Always print the complete current `diy.md` content directly in chat when starting or continuing a lesson, including a small pseudocode outline before the coding task.
+- Do not print the full `diy.md` in each chat. Link to it and give the concise lesson pseudocode and exercise in chat when starting a lesson.
 - Ask one useful question at a time. Correct mistakes simply. Answer doubts before moving on.
 - Capture useful questions, answers, corrections and trade-offs in the current lesson's `README.md` when they add lasting value.
 - Include practical examples, edge cases and time/space complexity when relevant to interview practice.
@@ -23,7 +23,7 @@ Maintain an evergreen, public, company-independent Python learning repository at
 - Keep lessons under `day-0/`, `day-1/`, `day-2/`, etc. Each day has its own directory, not a permanent branch.
 - Each lesson directory must contain:
   - `README.md`: objective, 2-4 sentence concept summary, key syntax, important points, brief trade-offs, run instructions, expected output and exercise.
-  - `diy.md`: fixed WSL commands to reset empty `lab/app.py` and `lab/requirements.txt`, short pseudocode, and a lesson-specific coding task. Do not give away the full solution.
+  - `diy.md`: link to root `diy.sh`, short pseudocode, and a lesson-specific coding task. Do not give away the full solution.
   - A complete, runnable `.py` reference file, such as `01_basics.py`.
   - `requirements.txt`: only necessary external dependencies; an empty file is fine.
 - Make examples generic and self-contained. Use the Python standard library first and avoid unnecessary dependencies.
@@ -36,14 +36,12 @@ Maintain an evergreen, public, company-independent Python learning repository at
 - Learner edits using `vi` in WSL, not an IDE or an editor inside the container.
 - Learner executes their own scratch file **directly in WSL** using the installed Python 3.12.3:
   ```bash
-  mkdir -p /mnt/c/code/personal/learn-python/lab
-  cd /mnt/c/code/personal/learn-python/lab
-  : > app.py
-  : > requirements.txt
-  vi app.py
-  python app.py
+  cd /mnt/c/code/personal/learn-python
+  bash diy.sh
+  # After saving in vi:
+  python lab/app.py
   ```
-- Clear the local `lab/app.py` and `lab/requirements.txt` at the start of each new lesson. The `: >` shell syntax truncates existing content. Reuse the same paths for each lesson, and never require the learner to commit their practice files. Do not confuse the local scratch file with the tracked lesson reference `.py` file.
+- Root `diy.sh` is the canonical WSL setup. Run `bash diy.sh` from the repository checkout after pulling the branch. It opens vi and deliberately does not run Python automatically. Clear the local `lab/app.py` and `lab/requirements.txt` at the start of each new lesson. The `: >` shell syntax truncates existing content. Reuse the same paths for each lesson, and never require the learner to commit their practice files. Do not confuse the local scratch file with the tracked lesson reference `.py` file.
 - Do not insist on upgrading local Python during basic lessons. Do not overwrite the operating system's Python.
 - For any other reader, offer a **fully isolated Podman** path with the pinned image `docker.io/library/python:3.12.14-slim-bookworm`:
   ```bash
