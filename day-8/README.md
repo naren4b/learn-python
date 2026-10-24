@@ -33,7 +33,7 @@ python day-8/08_tuples_sets.py
 Expected:
 ```text
 Server: api
-Unique zones: 3
+Unique zones: 2
 Common zones: ['east']
 All zones: ['east', 'north', 'south', 'west']
 ```
