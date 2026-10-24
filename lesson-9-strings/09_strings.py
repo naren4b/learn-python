@@ -1,6 +1,7 @@
-# Day 9: strings and their methods
+# Lesson 9: strings and their methods
 
 raw = "  API,DB,Cache  "
+# Key step: this operation demonstrates the lesson's main concept.
 services = raw.strip().lower().split(",")
 
 print(f"First: {services[0]}")
