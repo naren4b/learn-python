@@ -16,7 +16,9 @@ Run `python lesson-12-except/12_exceptions.py`.
 
 ```text
 Result: 5.0
+Cleanup complete
 Invalid number: abc
+Cleanup complete
 Cannot divide by zero
 Cleanup complete
 ```
