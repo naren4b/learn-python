@@ -45,3 +45,7 @@ Practice instructions: [diy.md](diy.md). Reset your ignored local practice files
 ## Practice review
 
 The learner split a comma-separated string into a list, counted items, appended a name, accessed the first entry, and joined values with a separator. Avoid naming a variable `str` because it shadows the built-in. Using `{value}` outside an f-string builds a set rather than formatting text. Reuse an already computed `names` list rather than repeatedly splitting. Python 3.12 allows reuse of matching quote styles inside f-string expressions.
+
+## Important line notes
+
+- `strip()` trims edges, `lower()` normalizes case, `split(',')` builds a list, and `join()` combines it.
