@@ -21,7 +21,7 @@ Run a lesson from the repository root:
 ```bash
 podman run --rm -v "$PWD:/work" -w /work \
   docker.io/library/python:3.12.14-slim-bookworm \
-  python day-0/00_hello.py
+  python lesson-0-hello/00_hello.py
 ```
 
 Expected: `Hello, Python!`
@@ -45,17 +45,17 @@ See [Python refresher roadmap](curriculum/README.md) for the core Python, practi
 
 | Day | Topic | Status |
 | --- | --- | --- |
-| [Day 0](day-0/README.md) | Setup, save and run Python | Completed |
-| [Day 1](day-1/README.md) | Syntax, indentation, comments and variables | Completed |
-| [Day 2](day-2/README.md) | Strings, integers, floats and booleans | Completed |
-| [Day 3](day-3/README.md) | Arithmetic, comparison and logical operators | Completed |
-| [Day 4](day-4/README.md) | Functions and return values | Completed |
-| [Day 5](day-5/README.md) | For and while loops | Completed |
-| [Day 6](day-6/README.md) | Lists and iteration | Completed |
-| [Day 7](day-7/README.md) | Dictionaries and key-value data | Completed |
-| [Day 8](day-8/README.md) | Tuples and sets | Reference merged; practice not submitted |
-| [Day 9](day-9/README.md) | Strings and text processing | Completed |
-| [Day 10](day-10/README.md) | Collections, sorting and comprehensions | Completed |
+| [Day 0](lesson-0-hello/README.md) | Setup, save and run Python | Completed |
+| [Day 1](lesson-1-basics/README.md) | Syntax, indentation, comments and variables | Completed |
+| [Day 2](lesson-2-types/README.md) | Strings, integers, floats and booleans | Completed |
+| [Day 3](lesson-3-ops/README.md) | Arithmetic, comparison and logical operators | Completed |
+| [Day 4](lesson-4-func/README.md) | Functions and return values | Completed |
+| [Day 5](lesson-5-loops/README.md) | For and while loops | Completed |
+| [Day 6](lesson-6-lists/README.md) | Lists and iteration | Completed |
+| [Day 7](lesson-7-dict/README.md) | Dictionaries and key-value data | Completed |
+| [Day 8](lesson-8-sets/README.md) | Tuples and sets | Reference merged; practice not submitted |
+| [Day 9](lesson-9-strings/README.md) | Strings and text processing | Completed |
+| [Day 10](lesson-10-comp/README.md) | Collections, sorting and comprehensions | Completed |
 | [Lesson 11](lesson-11-func-args/README.md) | Functions and arguments | Current lesson (reference prepared) |
 | Lesson 12+ | Exceptions, files, APIs, tests and coding exercises | [Planned topics](curriculum/README.md) |
 | Later | Easy and medium coding exercises | Planned |
