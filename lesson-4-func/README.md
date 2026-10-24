@@ -41,3 +41,7 @@ In stock: True
 ```
 
 Only the Python standard library is used.
+
+## Important line notes
+
+- `return` makes function output available to callers; `in_stock` returns a boolean comparison.
