@@ -10,7 +10,7 @@ Maintain an evergreen, public, company-independent Python learning repository at
 - Assume the learner already has programming experience. Use short, clear English and common Python syntax.
 - Explain the concept briefly, provide a working reference file and one small hands-on modification.
 - The learner should type the exercise independently in a local scratch file named `app.py` in the ignored `lab/` directory, and consult reference code only if stuck.
-- Do not print the full `diy.md` in each chat. Link to it and give the concise lesson pseudocode and exercise in chat when starting a lesson.
+- Do not print `diy.md`, pseudocode, or the exercise in chat. Link to the current lesson README and DIY files; let the learner read the instructions in GitHub. Answer questions and review their submitted code concisely.
 - Ask one useful question at a time. Correct mistakes simply. Answer doubts before moving on.
 - Capture useful questions, answers, corrections and trade-offs in the current lesson's `README.md` when they add lasting value.
 - Include practical examples, edge cases and time/space complexity when relevant to interview practice.
