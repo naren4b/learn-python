@@ -29,7 +29,7 @@ Read [diy.md](diy.md), then implement it in your ignored `lab/app.py`. Root [diy
 
 ## Run reference from repository root
 ```bash
-python day-5/05_loops.py
+python lesson-5-loops/05_loops.py
 ```
 
 Expected:
