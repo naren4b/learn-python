@@ -1,0 +1,10 @@
+{
+    "name": "Narendranath Panda",
+    "company": "Nokia Pvt Ltd",
+    "address": {
+        "street": "MG Road",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "zip": "560001"
+    }
+}
