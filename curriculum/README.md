@@ -65,7 +65,7 @@ learn-python/
 ├── diy.sh                       # reset ignored lab/ and open editor
 ├── curriculum/
 │   └── README.md                # all future topics (this file)
-├── day-N/
+├── lesson-N-abbr/
 │   ├── README.md                # objective, concise explanation, examples, output
 │   ├── diy.md                   # pseudocode and Your Exercise
 │   ├── NN_topic.py              # fully runnable reference implementation
