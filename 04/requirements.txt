@@ -1,6 +1,0 @@
-requests
-pathlib
-yaml
-csv
-json
-logging
