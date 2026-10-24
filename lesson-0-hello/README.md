@@ -38,3 +38,7 @@ Open `day-0/00_hello.py` in Notepad, change the greeting, save the file, and run
 
 ## Trade-off
 A fixed Podman image gives consistent Python versions across machines. Local Python is faster to launch but may use a different version. Use Podman for reproducible exercises.
+
+## Important line notes
+
+- `print(...)` writes text to the terminal.
