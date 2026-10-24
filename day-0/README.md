@@ -18,7 +18,7 @@ Save a Python file in a text editor and run it with Python 3.12.14 inside Podman
 ## Run
 
 ```bash
-cd ~/ws/personal/guidewire-python
+cd /mnt/c/code/personal/learn-python
 pwd
 podman run --rm docker.io/library/python:3.12.14-slim-bookworm python --version
 podman run --rm -v "$PWD:/work" -w /work docker.io/library/python:3.12.14-slim-bookworm python day-0/00_hello.py
@@ -31,7 +31,7 @@ Python 3.12.14
 Hello, Python!
 ```
 
-If your existing checkout uses a different path, use that directory instead. There is no need to create another directory.
+Use your existing repository checkout. Do not create a second working directory.
 
 ## Practice
 Open `day-0/00_hello.py` in Notepad, change the greeting, save the file, and run the command again.
