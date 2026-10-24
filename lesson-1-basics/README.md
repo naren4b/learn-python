@@ -20,14 +20,14 @@ Write a short Python program using variables, comments, indentation, `if` and `p
 From the repository root:
 
 ```bash
-python day-1/01_basics.py
+python lesson-1-basics/01_basics.py
 ```
 
 ## Run in isolated Podman
 ```bash
 podman run --rm -v "$PWD:/work" -w /work \
   docker.io/library/python:3.12.14-slim-bookworm \
-  python day-1/01_basics.py
+  python lesson-1-basics/01_basics.py
 ```
 
 The complete reference solution is [01_basics.py](01_basics.py). No packages are needed; `requirements.txt` is empty.
