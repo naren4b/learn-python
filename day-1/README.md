@@ -5,7 +5,7 @@ Write a short Python program using variables, comments, indentation, `if` and `p
 
 ## Key points
 - `#` starts a comment.
-- `name = "Python"` assigns a value without declaring a type (unlike Java's `String name`).
+- `name = "Python"` assigns a value without an explicit type declaration.
 - `True` and `False` start with capitals.
 - A colon `:` begins a code block. Indent its body with four spaces.
 - `print()` writes output. No semicolons or braces are needed.
@@ -42,4 +42,4 @@ Program completed
 ```
 
 ## Trade-off
-Python uses indentation to mark blocks, instead of Java's braces. It saves punctuation but consistent spaces matter.
+Python uses indentation to mark blocks. Consistent four-space indentation matters.
