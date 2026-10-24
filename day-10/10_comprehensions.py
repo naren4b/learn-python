@@ -1,6 +1,6 @@
 # Day 10: sorting and comprehensions
 
-numbers = [20, 5, 30, 10]
+numbers = [20, 5, 30, 10, 5]
 names = ["api", "worker"]
 
 print(f"Sorted: {sorted(numbers)}")
