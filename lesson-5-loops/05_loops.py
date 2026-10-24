@@ -1,6 +1,7 @@
-# Day 5: loops
+# Lesson 5: loops
 
 total = 0
+# Key step: the following statement creates or updates a value used below.
 for number in range(1, 6):
     total += number
 print(f"Total: {total}")
