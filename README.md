@@ -52,8 +52,10 @@ See [Python refresher roadmap](curriculum/README.md) for the core Python, practi
 | [Day 4](day-4/README.md) | Functions and return values | Completed |
 | [Day 5](day-5/README.md) | For and while loops | Completed |
 | [Day 6](day-6/README.md) | Lists and iteration | Completed |
-| [Day 7](day-7/README.md) | Dictionaries and key-value data | In progress (PR open) |
-| Day 8+ | Tuples/sets, strings, collections, exceptions, files, APIs, testing and coding exercises | [Planned topics](curriculum/README.md) |
+| [Day 7](day-7/README.md) | Dictionaries and key-value data | Completed |
+| [Day 8](day-8/README.md) | Tuples and sets | Reference merged; practice not submitted |
+| [Day 9](day-9/README.md) | Strings and text processing | In progress (PR open) |
+| Day 10+ | Comprehensions, exceptions, files, APIs, tests and coding exercises | [Planned topics](curriculum/README.md) |
 | Later | Easy and medium coding exercises | Planned |
 
 Practice one topic at a time. The maintainer prepares reference code and documentation on a task branch. Learners do not need to commit their practice code. Lessons are merged to `main` once completed and reviewed.
