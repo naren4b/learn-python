@@ -37,6 +37,10 @@ If you use a different local checkout location, change only the `cd` command. No
 
 Each day contains one short `README.md`, a `diy.md` with the fixed local `app.py` workflow, one runnable reference Python file, and `requirements.txt` (with no dependencies when none are needed). Extra packages, where required, will be explained in that day's README.
 
+## Complete refresher roadmap
+
+See [Python refresher roadmap](curriculum/README.md) for the core Python, practical automation, interview problem tracks and the standard lesson folder skeleton. Planned topics are outlines only; working reference code is created when that lesson starts.
+
 ## Learning path
 
 | Day | Topic | Status |
@@ -49,7 +53,7 @@ Each day contains one short `README.md`, a `diy.md` with the fixed local `app.py
 | [Day 5](day-5/README.md) | For and while loops | Advanced by learner |
 | [Day 6](day-6/README.md) | Lists and iteration | Completed (advanced by learner) |
 | [Day 7](day-7/README.md) | Dictionaries and key-value data | In progress (PR open) |
-| Day 8+ | More collections, files, APIs and tests | Planned |
+| Day 8+ | Tuples/sets, strings, collections, exceptions, files, APIs, testing and coding exercises | [Planned topics](curriculum/README.md) |
 | Later | Easy and medium coding exercises | Planned |
 
 Practice one topic at a time. The maintainer prepares reference code and documentation on a task branch. Learners do not need to commit their practice code. Lessons are merged to `main` once completed and reviewed.
