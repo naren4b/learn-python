@@ -36,3 +36,7 @@ Double: 8
 ```
 
 Use [diy.md](diy.md) for independent practice; root [diy.sh](../diy.sh) prepares ignored `lab/app.py`. No external dependencies.
+
+## Important line notes
+
+- `quantity=1` provides a default argument; `*labels` collects positional arguments; `**attributes` collects keyword arguments; `lambda` makes a small function expression.

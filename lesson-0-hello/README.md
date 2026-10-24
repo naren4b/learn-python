@@ -21,7 +21,7 @@ Save a Python file in a text editor and run it with Python 3.12.14 inside Podman
 cd /mnt/c/code/personal/learn-python
 pwd
 podman run --rm docker.io/library/python:3.12.14-slim-bookworm python --version
-podman run --rm -v "$PWD:/work" -w /work docker.io/library/python:3.12.14-slim-bookworm python day-0/00_hello.py
+podman run --rm -v "$PWD:/work" -w /work docker.io/library/python:3.12.14-slim-bookworm python lesson-0-hello/00_hello.py
 ```
 
 Expected:
@@ -34,7 +34,11 @@ Hello, Python!
 Use your existing repository checkout. Do not create a second working directory.
 
 ## Practice
-Open `day-0/00_hello.py` in Notepad, change the greeting, save the file, and run the command again.
+Open `lesson-0-hello/00_hello.py` in Notepad, change the greeting, save the file, and run the command again.
 
 ## Trade-off
 A fixed Podman image gives consistent Python versions across machines. Local Python is faster to launch but may use a different version. Use Podman for reproducible exercises.
+
+## Important line notes
+
+- `print(...)` writes text to the terminal.
