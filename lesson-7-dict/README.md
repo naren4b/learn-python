@@ -45,3 +45,7 @@ Practice independently with [diy.md](diy.md) and root [diy.sh](../diy.sh). No th
 - Python's missing-value sentinel is `None`, not JSON's `null`.
 - Guard an optional value before conversion: `cpu = server.get("cpu"); if cpu is not None and int(cpu) < 10: ...`. The right-hand side of `and` is skipped when the left side is false.
 - `get()` also returns `None` for a present key holding `None`, unless a different fallback is specified.
+
+## Important line notes
+
+- `server['name']` accesses an existing key; `get('region', 'unknown')` supplies a fallback; `items()` yields key-value pairs.
