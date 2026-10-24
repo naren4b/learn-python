@@ -37,3 +37,48 @@ Missing file handled
 ```
 
 Read [DIY](diy.md) and [reference code](13_files.py). **Trade-off:** Avoid writing over important files; use temporary locations for practice. CSV, JSON and YAML are covered in Lesson 14.
+
+## Import syntax quick reference
+
+| Syntax | Meaning |
+| --- | --- |
+| `import pathlib` | Import a module; call `pathlib.Path(...)`. |
+| `from pathlib import Path` | Bring just `Path` into the current namespace. |
+| `import datetime as dt` | Alias a module. |
+| `from pathlib import Path as FilePath` | Alias an imported name. |
+| `from math import sqrt, pi` | Import selected names. |
+| `from math import *` | Import many public names; avoid due to namespace collisions. |
+| `from helpers import greet` | Absolute import: find the top-level `helpers` module on the import search path. |
+| `from .helpers import greet` | Explicit relative import: find `helpers` in the current package. |
+
+### Absolute versus relative imports
+
+For a package like this:
+
+```text
+project/
+├── main.py
+└── myapp/
+    ├── __init__.py
+    ├── helpers.py
+    └── service.py
+```
+
+In `myapp/service.py`, both forms can be useful, but they refer to different locations:
+
+```python
+from myapp.helpers import greet  # Absolute: explicitly named package.
+from .helpers import greet       # Relative: same package as service.py.
+```
+
+By contrast, `from helpers import greet` searches for a **top-level** `helpers` module, not specifically `myapp/helpers.py`. Run package code using `python -m myapp.service` from the project root; directly running `python myapp/service.py` normally breaks relative imports because there is no established package context.
+
+### Python naming conventions (PEP 8)
+
+- Classes: `PascalCase` (e.g. `FileManager`).
+- Functions, methods, variables and modules: `snake_case` (e.g. `read_text_file`, `file_manager.py`).
+- Constants: `UPPER_SNAKE_CASE` (e.g. `MAX_RETRIES`).
+- Internal-use names: leading underscore (e.g. `_parse_line`).
+- Special methods: double underscores (e.g. `__init__`).
+
+See [PEP 8](https://peps.python.org/pep-0008/). Imports and packages are revisited in Lesson 15.
