@@ -18,8 +18,8 @@ This is the **curriculum skeleton**, not a claim that future lessons are impleme
 | 9 | Strings | slicing, split/join, strip, replace, find, formatting | Active |
 | 10 | Collections and comprehensions | slicing, sorting, list/dict/set comprehensions | Planned |
 | 11 | Functions and arguments | def, return vs print, defaults, *args/**kwargs, lambda, local/global scope | Planned |
-| 12 | Exceptions | try/except/else/finally, raising errors | Planned |
-| 13 | File handling basics | with/open, read/write/append, encodings, pathlib, text files | Planned |
+| 12 | Exceptions | try/except/else/finally, raising errors | Reference merged |
+| 13 | File handling basics | with/open, read/write/append, encodings, pathlib, text files | Active |
 | 14 | CSV, JSON and YAML files | csv.reader/DictReader/DictWriter, json.load/dump, YAML safe_load/safe_dump with PyYAML, parsing and validation | Planned |
 | 15 | Modules and packages | import, __name__, pip/venv, requirements | Planned |
 | 16 | Classes and OOP basics | class, object, __init__, self, instance attributes, methods, encapsulation, inheritance, dataclasses | Planned |
