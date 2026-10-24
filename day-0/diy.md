@@ -1,14 +1,14 @@
 # Day 0: Do it yourself
 
-Use your existing WSL checkout:
+From your existing WSL checkout:
 
 ```bash
 cd /mnt/c/code/personal/learn-python
-python --version
-vi day-0/00_hello.py
-python day-0/00_hello.py
+touch app.py requirements.txt
+vi app.py
+python app.py
 ```
 
-Write one `print()` statement to display `Hello, Python!`. Save and run it. No packages need installing.
+Write a `print()` statement that displays `Hello, Python!`. Save and run it.
 
-For the fixed Python 3.12.14 container alternative, follow [README.md](README.md). Do not create another repository directory.
+Use `app.py` as your personal practice file. Do not commit it. No packages are required. For the maintained reference solution and Podman instructions, see [README.md](README.md).
