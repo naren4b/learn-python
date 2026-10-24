@@ -49,9 +49,9 @@ See [Python refresher roadmap](curriculum/README.md) for the core Python, practi
 | [Day 1](day-1/README.md) | Syntax, indentation, comments and variables | Completed |
 | [Day 2](day-2/README.md) | Strings, integers, floats and booleans | Completed |
 | [Day 3](day-3/README.md) | Arithmetic, comparison and logical operators | Completed |
-| [Day 4](day-4/README.md) | Functions and return values | Completed (advanced by learner) |
-| [Day 5](day-5/README.md) | For and while loops | Advanced by learner |
-| [Day 6](day-6/README.md) | Lists and iteration | Completed (advanced by learner) |
+| [Day 4](day-4/README.md) | Functions and return values | Completed |
+| [Day 5](day-5/README.md) | For and while loops | Completed |
+| [Day 6](day-6/README.md) | Lists and iteration | Completed |
 | [Day 7](day-7/README.md) | Dictionaries and key-value data | In progress (PR open) |
 | Day 8+ | Tuples/sets, strings, collections, exceptions, files, APIs, testing and coding exercises | [Planned topics](curriculum/README.md) |
 | Later | Easy and medium coding exercises | Planned |
