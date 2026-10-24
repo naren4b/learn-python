@@ -36,3 +36,7 @@ Read [diy.md](diy.md) and use root [diy.sh](../diy.sh). No external dependencies
 - `[]` creates a list comprehension, `{}` with one expression creates a set comprehension, `{key: value ...}` creates a dictionary comprehension, and `()` creates a generator expression.
 - In a function signature, `-> int` indicates the intended return type; annotations are not automatically enforced by Python.
 - Other symbols to recognize: `:=` assignment expression, `@` decorator, `*args` positional arguments, and `**kwargs` keyword arguments. Their deeper use belongs in later function/OOP lessons.
+
+## Important line notes
+
+- `sorted()` returns a new list; comprehensions transform or filter values; set comprehensions remove duplicates.
