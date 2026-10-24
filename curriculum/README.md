@@ -13,18 +13,25 @@ This is the **curriculum skeleton**, not a claim that future lessons are impleme
 | 4 | Functions | def, parameters, return, scope basics | Completed |
 | 5 | Loops | range, for, while, break, continue | Completed |
 | 6 | Lists | indexing, append, iteration, len, sum | Completed |
-| 7 | Dictionaries | key/value access, get, update, items | Active: PR #11 |
-| 8 | Tuples and sets | immutability, uniqueness, membership, set operations | Planned |
-| 9 | Strings | slicing, split/join, strip, replace, find, formatting | Planned |
+| 7 | Dictionaries | key/value access, get, update, items | Completed |
+| 8 | Tuples and sets | immutability, uniqueness, membership, set operations | Reference merged |
+| 9 | Strings | slicing, split/join, strip, replace, find, formatting | Active |
 | 10 | Collections and comprehensions | slicing, sorting, list/dict/set comprehensions | Planned |
-| 11 | Functions deeper | defaults, *args/**kwargs, lambda, scope | Planned |
+| 11 | Functions and arguments | def, return vs print, defaults, *args/**kwargs, lambda, local/global scope | Planned |
 | 12 | Exceptions | try/except/else/finally, raising errors | Planned |
-| 13 | Files and paths | with/open, pathlib, text files | Planned |
-| 14 | JSON and CSV | load/dump, reading/writing structured data | Planned |
+| 13 | File handling basics | with/open, read/write/append, encodings, pathlib, text files | Planned |
+| 14 | CSV, JSON and YAML files | csv.reader/DictReader/DictWriter, json.load/dump, YAML safe_load/safe_dump with PyYAML, parsing and validation | Planned |
 | 15 | Modules and packages | import, __name__, pip/venv, requirements | Planned |
-| 16 | Object-oriented Python | classes, __init__, methods, dataclasses | Planned |
+| 16 | Classes and OOP basics | class, object, __init__, self, instance attributes, methods, encapsulation, inheritance, dataclasses | Planned |
 | 17 | Iterators and generators | iterable, yield, enumerate, zip | Planned |
 | 18 | Useful standard library | collections, itertools, datetime, re | Planned |
+
+## Specific refresh coverage
+
+- **Functions:** define/call functions, positional and keyword arguments, defaults, return values, scope, and basic type annotations.
+- **Classes/OOP:** instantiate objects, constructors (`__init__`), `self`, instance vs class attributes, instance methods, simple inheritance and composition.
+- **File handling:** use `with open(...)` and `pathlib.Path` for text files; read/write CSV with `csv`, JSON with `json`, and YAML with `PyYAML` (`yaml.safe_load` / `yaml.safe_dump`). Unlike CSV and JSON, YAML requires an external dependency recorded in `requirements.txt`.
+- Include small standalone exercises for **reading, modifying and writing each format**, including errors for missing or malformed files. Keep sample files generic and free of secrets.
 
 ## Track B: Practical Python
 
