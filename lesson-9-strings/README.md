@@ -28,7 +28,7 @@ String methods do not edit the original string. Assign the returned value when y
 ## Reference
 From the repository root:
 ```bash
-python day-9/09_strings.py
+python lesson-9-strings/09_strings.py
 ```
 
 Expected:
