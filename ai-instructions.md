@@ -21,7 +21,7 @@ Maintain an evergreen, public, company-independent Python learning repository at
 ## Repository structure
 
 - Preserve the root `README.md` as the public entry point: setup, how to learn, lesson index and progress.
-- Name new lesson directories `lesson-{n}-{short-abbreviation}/` (for example `lesson-11-func-args/`), one lesson per directory. Older `day-*` directories are legacy paths until separately migrated.
+- Name new lesson directories `lesson-{n}-{short-abbreviation}/` (for example `lesson-11-func-args/`), one lesson per directory. Lessons 0–11 use `lesson-{n}-{abbr}/` naming; historical archive paths remain unchanged.
 - Each lesson directory must contain:
   - `README.md`: objective, 2-4 sentence concept summary, key syntax, important points, brief trade-offs, run instructions, expected output and exercise.
   - `diy.md`: link to root `diy.sh`, short pseudocode, and a lesson-specific coding task. Do not give away the full solution.
@@ -48,7 +48,7 @@ Maintain an evergreen, public, company-independent Python learning repository at
   ```bash
   podman run --rm -v "$PWD:/work" -w /work \
     docker.io/library/python:3.12.14-slim-bookworm \
-    python day-1/01_basics.py
+    python lesson-1-basics/01_basics.py
   ```
 - Do not assume editors such as `vi` or `vim` exist inside the slim container.
 - Ignore `/lab/` in Git so local practice code and files never appear in commits.
