@@ -1,15 +1,6 @@
 # Day 4: Do it yourself
 
-Use WSL. These commands **empty both files** before opening the editor.
-
-```bash
-mkdir -p /mnt/c/code/personal/learn-python/lab
-cd /mnt/c/code/personal/learn-python/lab
-: > app.py
-: > requirements.txt
-vi app.py
-python app.py
-```
+Use WSL. Run the root [diy.sh](../diy.sh) with `bash diy.sh` from the repository root. It **empties both local scratch files** and opens `lab/app.py` in `vi`. After saving and exiting, run `python lab/app.py` from the repository root.
 
 ## Pseudocode
 
