@@ -1,30 +1,58 @@
 # Learn Python
 
-Hands-on Python learning, one small runnable lesson at a time. Examples are useful for anyone refreshing Python or preparing for coding interviews.
+Learn Python by writing and running small programs. Start with Day 0 and follow the lessons in order. This repository is generic and open to anyone.
 
-## Lessons
+## Setup (Windows + WSL + Podman)
+
+Requirements: WSL, Podman, and a text editor such as Notepad. Python is provided by the container, so you do not need to install it on Windows.
+
+Open WSL and use your existing checkout:
+
+```bash
+cd /mnt/c/code/personal/learn-python
+git pull --ff-only origin main
+podman run --rm docker.io/library/python:3.12.14-slim-bookworm python --version
+```
+
+Expected: `Python 3.12.14`.
+
+Run a lesson from the repository root:
+
+```bash
+podman run --rm -v "$PWD:/work" -w /work \
+  docker.io/library/python:3.12.14-slim-bookworm \
+  python day-0/00_hello.py
+```
+
+Expected: `Hello, Python!`
+
+If you use a different local checkout location, change only the `cd` command. No extra working directory is needed.
+
+## How to learn
+
+1. Open the current day's `README.md` and read the objective and key points.
+2. Open its `.py` file in Notepad. Run it using Podman.
+3. Change the program as suggested in the exercise. Save and run again.
+4. Explain what changed and check the output before moving to the next day.
+
+Each day contains one short `README.md`, one runnable Python file, and `requirements.txt` (with no dependencies when none are needed). Extra packages, where required, will be explained in that day's README.
+
+## Learning path
 
 | Day | Topic | Status |
 | --- | --- | --- |
-| [Day 0](day-0/README.md) | Run Python 3.12.14 with Podman | Ready to test |
-| Day 1 | Syntax, variables and comments | Planned |
-| Day 2 | Strings, numbers and booleans | Planned |
-| Day 3+ | Operators, functions, control flow, collections, files, APIs, tests and coding practice | Planned |
+| [Day 0](day-0/README.md) | Setup, save and run Python | Ready to test |
+| Day 1 | Syntax, indentation, comments and variables | Planned |
+| Day 2 | Strings, integers, floats and booleans | Planned |
+| Day 3+ | Operators, functions, classes, control flow, collections, files, APIs and tests | Planned |
+| Later | Easy and medium coding exercises | Planned |
 
-## Layout
+Practice one topic at a time. New lessons arrive through reviewed pull requests and are collected on `main`.
 
-Each completed day is a directory: `day-0/`, `day-1/`, and so on. Each contains:
-- One-page `README.md` with objective, key ideas, commands, practice and trade-offs.
-- A complete runnable `.py` example.
-- `requirements.txt`, empty of dependencies when none are needed.
+## Archived examples
 
-Existing examples, including [REST examples](learn-rest/get_json_data.py), are preserved until they can be reviewed and reorganized.
+Old examples are retained unchanged under [archive](archive/learn-rest/get_json_data.py). They are historical material, not part of the ordered beginner-to-interview learning path. The archived REST example uses the external `requests` package and requires network access.
 
-## Learning workflow
+## Contribution rules
 
-1. Practice locally with Notepad, WSL and Podman.
-2. Keep one day per directory and one focused change per pull request.
-3. Review and merge verified lessons into `main`. Avoid direct commits to `main`.
-4. Keep examples generic. No company interview content, credentials, cloud accounts or required IDE.
-
-Run Day 0 before moving to Day 1. The official Python image is pinned at `docker.io/library/python:3.12.14-slim-bookworm`.
+Keep examples small, runnable and company-independent. Never commit credentials. Prefer Python's standard library unless an external package is essential. Add diagrams only where they make the explanation easier to understand.
