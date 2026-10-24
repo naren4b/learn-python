@@ -51,7 +51,7 @@ Practice one topic at a time. New lessons arrive through reviewed pull requests 
 
 ## Archived examples
 
-Old examples are retained unchanged under [archive](archive/learn-rest/get_json_data.py). They are historical material, not part of the ordered beginner-to-interview learning path. The archived REST example uses the external `requests` package and requires network access.
+Older lessons and experiments are preserved under [archive/legacy-days](archive/legacy-days/01/README.md), [archive/setup.md](archive/setup.md) and [archive/learn-rest](archive/learn-rest/get_json_data.py). They are historical material, not part of the ordered learning path. Some examples use external packages, network access or an older runtime.
 
 ## Contribution rules
 
