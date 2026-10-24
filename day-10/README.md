@@ -27,3 +27,12 @@ Unique: [5, 10, 20, 30]
 ```
 
 Read [diy.md](diy.md) and use root [diy.sh](../diy.sh). No external dependencies.
+
+## Questions from practice
+
+- List comprehension syntax is `[expression for item in values if condition]`. The expression transforms the selected values; the optional condition filters them.
+- Use `==` to compare values, not `=`.
+- Dictionary comprehension uses `{key_expression: value_expression for item in values}`, e.g. `{name: len(name) for name in names}`.
+- `[]` creates a list comprehension, `{}` with one expression creates a set comprehension, `{key: value ...}` creates a dictionary comprehension, and `()` creates a generator expression.
+- In a function signature, `-> int` indicates the intended return type; annotations are not automatically enforced by Python.
+- Other symbols to recognize: `:=` assignment expression, `@` decorator, `*args` positional arguments, and `**kwargs` keyword arguments. Their deeper use belongs in later function/OOP lessons.
