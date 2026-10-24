@@ -21,7 +21,7 @@ Maintain an evergreen, public, company-independent Python learning repository at
 ## Repository structure
 
 - Preserve the root `README.md` as the public entry point: setup, how to learn, lesson index and progress.
-- Keep lessons under `day-0/`, `day-1/`, `day-2/`, etc. Each day has its own directory, not a permanent branch.
+- Name new lesson directories `lesson-{n}-{short-abbreviation}/` (for example `lesson-11-func-args/`), one lesson per directory. Older `day-*` directories are legacy paths until separately migrated.
 - Each lesson directory must contain:
   - `README.md`: objective, 2-4 sentence concept summary, key syntax, important points, brief trade-offs, run instructions, expected output and exercise.
   - `diy.md`: link to root `diy.sh`, short pseudocode, and a lesson-specific coding task. Do not give away the full solution.
@@ -72,7 +72,7 @@ Maintain an evergreen, public, company-independent Python learning repository at
 ## Curriculum and pacing
 
 - Use [curriculum/README.md](curriculum/README.md) as the tracked curriculum roadmap and future lesson folder skeleton. It maps core language, practical scripting and coding interviews.
-- Planned days are roadmap entries, not empty lesson directories. Create complete four-file `day-N/` implementations only when that lesson starts.
+- Planned days are roadmap entries, not empty lesson directories. Create complete four-file `lesson-N-abbr/` implementations only when that lesson starts.
 
 
 Start with environment setup, Python syntax, types, operators, functions/classes, conditions, loops, collections, indexing/slicing, comprehensions/sorting, exceptions, files/JSON/CLI, subprocess, core libraries, HTTP/API, server, AWS/Kubernetes client illustrations, testing, and coding problems. Adjust pace based on the learner's understanding.
