@@ -1,5 +1,6 @@
-# Day 6: lists
+# Lesson 6: lists
 
+# Key step: the following statement creates or updates a value used below.
 latencies = [120, 130, 140]
 latencies.append(160)
 
