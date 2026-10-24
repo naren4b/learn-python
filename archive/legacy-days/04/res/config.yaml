@@ -1,0 +1,16 @@
+apiVersion: 1.0.0
+apis:
+  - description: Books API
+    path: /books
+authorizations:
+  apiKey:
+    passAs: header
+    type: apiKey
+info:
+  contact: support@example.com
+  description: "<strong>Great</strong> APIs by Great People."
+  license: Apache 2.0
+  licenseUrl: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfServiceUrl: http://example.com/terms
+  title: My custom API
+swaggerVersion: "1.2"
