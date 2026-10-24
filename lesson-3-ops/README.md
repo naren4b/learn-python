@@ -44,3 +44,7 @@ Follow [diy.md](diy.md). No external dependencies.
 ## Learner practice notes
 
 The learner implemented a quantity and stock check before applying a member discount. For `price=200`, `discount=20`, `stock=100`, `member=False`, `quantity=2`, the output is `Total price 400`. With membership enabled, the total becomes `320.0`; quantity greater than stock produces `out of stock`. Use descriptive names and four-space indentation. Combining conditions with `and` can sometimes simplify nested `if` blocks, provided the logic is preserved.
+
+## Important line notes
+
+- `price * discount / 100` calculates the percentage; `and` requires both conditions; `%` gets the remainder.
