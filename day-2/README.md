@@ -42,3 +42,10 @@ Next year: 46
 ```
 
 No external dependencies.
+
+## Notes from practice
+
+- `type(value).__name__` prints readable type names such as `str`, `float` and `bool`.
+- Keep postal codes as strings, because they are identifiers, not quantities.
+- An f-string starts with `f`; expressions inside `{...}` are evaluated. For example, `f"{price:.2f}"` displays a decimal with two digits after the point.
+- To calculate a 20% discount, use `price * 20 / 100`. The `%` operator means remainder: `10 % 3` is `1`.
