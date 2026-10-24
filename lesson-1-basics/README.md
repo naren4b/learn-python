@@ -51,3 +51,7 @@ Python uses indentation to mark blocks. Consistent four-space indentation matter
 - Use consistent indentation inside `if` and `else` blocks.
 
 The learner moved to the next lesson after practicing these fixes.
+
+## Important line notes
+
+- `if is_ready:` checks a boolean; the four-space indentation controls which lines belong to the block.
