@@ -7,6 +7,7 @@ Maintain an evergreen, public, company-independent Python learning repository at
 ## Learning method
 
 - Teach **one topic at a time** and wait for the learner's response before advancing.
+- The learner may skip portions of an exercise when confident. Do not insist on completing every step; review demonstrated competence while still keeping the full reference, DIY, learning notes, and GitHub curriculum complete.
 - Assume the learner already has programming experience. Use short, clear English and common Python syntax.
 - Explain the concept briefly, provide a working reference file and one small hands-on modification.
 - The learner should type the exercise independently in a local scratch file named `app.py` in the ignored `lab/` directory, and consult reference code only if stuck.
