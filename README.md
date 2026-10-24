@@ -57,8 +57,9 @@ See [Python refresher roadmap](curriculum/README.md) for the core Python, practi
 | [Day 9](lesson-9-strings/README.md) | Strings and text processing | Completed |
 | [Day 10](lesson-10-comp/README.md) | Collections, sorting and comprehensions | Completed |
 | [Lesson 11](lesson-11-func-args/README.md) | Functions and arguments | Reference merged; practice reviewed |
-| [Lesson 12](lesson-12-except/README.md) | Exception handling | Current lesson (PR open) |
-| Lesson 13+ | Files, APIs, tests and coding exercises | [Planned topics](curriculum/README.md) |
+| [Lesson 12](lesson-12-except/README.md) | Exception handling | Reference merged |
+| [Lesson 13](lesson-13-files/README.md) | Text file handling | Current lesson (PR open) |
+| Lesson 14+ | CSV, JSON, YAML, APIs and tests | [Planned topics](curriculum/README.md) |
 | Later | Easy and medium coding exercises | Planned |
 
 Practice one topic at a time. The maintainer prepares reference code and documentation on a task branch. Learners do not need to commit their practice code. Lessons are merged to `main` once completed and reviewed.
