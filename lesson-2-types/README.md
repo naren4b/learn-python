@@ -22,14 +22,14 @@ Follow [diy.md](diy.md), type the solution into your local `app.py`, and run it 
 
 ## Run the reference in WSL
 ```bash
-python day-2/02_types.py
+python lesson-2-types/02_types.py
 ```
 
 ## Isolated Podman
 ```bash
 podman run --rm -v "$PWD:/work" -w /work \
   docker.io/library/python:3.12.14-slim-bookworm \
-  python day-2/02_types.py
+  python lesson-2-types/02_types.py
 ```
 
 ## Expected output
