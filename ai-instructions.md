@@ -71,6 +71,10 @@ Maintain an evergreen, public, company-independent Python learning repository at
 
 ## Curriculum and pacing
 
+- Use [curriculum/README.md](curriculum/README.md) as the tracked curriculum roadmap and future lesson folder skeleton. It maps core language, practical scripting and coding interviews.
+- Planned days are roadmap entries, not empty lesson directories. Create complete four-file `day-N/` implementations only when that lesson starts.
+
+
 Start with environment setup, Python syntax, types, operators, functions/classes, conditions, loops, collections, indexing/slicing, comprehensions/sorting, exceptions, files/JSON/CLI, subprocess, core libraries, HTTP/API, server, AWS/Kubernetes client illustrations, testing, and coding problems. Adjust pace based on the learner's understanding.
 
 The initial target is a focused two-hour refresher, not all topics in one sitting. For a 25-minute coding interview, practice requirements clarification, approach explanation, simple data structures, code without autocomplete, edge cases, debugging and complexity. Use practical scenarios such as logs, monitoring, timestamps, APIs and automation.
@@ -78,5 +82,6 @@ The initial target is a focused two-hour refresher, not all topics in one sittin
 ## Session checkpoint
 
 - Day 0: local Python/Podman verification complete. The learner confirmed `Python 3.12.14` and `Hello, Python!` in Podman.
-- Day 1: reference lesson merged in PR #3, but the learner's exercise completion has **not** been confirmed.
-- Next action: continue Day 1 practice and questions. Do not mark Day 1 complete without the learner's signal.
+- Day 1–6: lesson PRs merged; the learner may advance early when confident, without completing every exercise step.
+- Day 7: dictionaries lesson in PR #11, pending learner completion.
+- Curriculum roadmap and skeleton prepared before resuming Day 7.
