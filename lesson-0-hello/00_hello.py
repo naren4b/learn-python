@@ -1,2 +1,3 @@
-# Day 0: verify Python file execution.
+# Lesson 0: verify that Python executes this file.
+# print writes a message to standard output.
 print("Hello, Python!")
