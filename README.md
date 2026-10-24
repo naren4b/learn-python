@@ -41,9 +41,9 @@ Each day contains one short `README.md`, a `diy.md` with the fixed local `app.py
 
 | Day | Topic | Status |
 | --- | --- | --- |
-| [Day 0](day-0/README.md) | Setup, save and run Python | Ready to test |
-| [Day 1](day-1/README.md) | Syntax, indentation, comments and variables | In progress |
-| Day 2 | Strings, integers, floats and booleans | Planned |
+| [Day 0](day-0/README.md) | Setup, save and run Python | Completed |
+| [Day 1](day-1/README.md) | Syntax, indentation, comments and variables | Completed |
+| [Day 2](day-2/README.md) | Strings, integers, floats and booleans | In progress (PR open) |
 | Day 3+ | Operators, functions, classes, control flow, collections, files, APIs and tests | Planned |
 | Later | Easy and medium coding exercises | Planned |
 
