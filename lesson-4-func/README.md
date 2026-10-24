@@ -30,7 +30,7 @@ Follow [diy.md](diy.md), writing your code in the ignored `lab/app.py`. Referenc
 
 Run the maintained example from the repository root:
 ```bash
-python day-4/04_functions.py
+python lesson-4-func/04_functions.py
 ```
 
 Expected output:
