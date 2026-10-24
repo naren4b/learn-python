@@ -31,7 +31,7 @@ If you use a different local checkout location, change only the `cd` command. No
 ## How to learn
 
 1. Open the current day's `README.md` to understand the objective and key points.
-2. Follow `diy.md`, create or reuse `lab/app.py` in the Git-ignored `lab/` directory using `vi`, and run `python app.py` in WSL. Do not commit the local exercise. Create `lab/` with `mkdir -p lab` before entering it. Use the lesson's reference `.py` only if needed.
+2. Follow `diy.md`. From the repository root, run `bash diy.sh` to reset and open the ignored `lab/app.py` in `vi`. After exiting, run `python lab/app.py` in WSL. Do not commit the local exercise. Create `lab/` with `mkdir -p lab` before entering it. Use the lesson's reference `.py` only if needed.
 3. Change the program as suggested in the exercise. Save and run again. Ask questions and mark the lesson finished before the next PR is merged.
 4. Explain what changed and check the output before moving to the next day.
 
@@ -44,8 +44,9 @@ Each day contains one short `README.md`, a `diy.md` with the fixed local `app.py
 | [Day 0](day-0/README.md) | Setup, save and run Python | Completed |
 | [Day 1](day-1/README.md) | Syntax, indentation, comments and variables | Completed |
 | [Day 2](day-2/README.md) | Strings, integers, floats and booleans | Completed |
-| [Day 3](day-3/README.md) | Arithmetic, comparison and logical operators | In progress (PR open) |
-| Day 4+ | Functions, classes, control flow, collections, files, APIs and tests | Planned |
+| [Day 3](day-3/README.md) | Arithmetic, comparison and logical operators | Completed |
+| [Day 4](day-4/README.md) | Functions and return values | In progress (PR open) |
+| Day 5+ | Classes, control flow, collections, files, APIs and tests | Planned |
 | Later | Easy and medium coding exercises | Planned |
 
 Practice one topic at a time. The maintainer prepares reference code and documentation on a task branch. Learners do not need to commit their practice code. Lessons are merged to `main` once completed and reviewed.
