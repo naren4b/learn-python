@@ -37,3 +37,11 @@ cpu: 8
 ```
 
 Practice independently with [diy.md](diy.md) and root [diy.sh](../diy.sh). No third-party dependencies.
+
+## Learner questions: values, missing keys and conversion
+
+- Use `server["name"]` or `server.get("name")`; `server("name")` attempts to call a dictionary and raises `TypeError`.
+- Store numeric CPU counts as integers when possible. If data arrives as numeric text, `int(server["cpu"])` converts it before comparison; invalid text raises `ValueError`.
+- Python's missing-value sentinel is `None`, not JSON's `null`.
+- Guard an optional value before conversion: `cpu = server.get("cpu"); if cpu is not None and int(cpu) < 10: ...`. The right-hand side of `and` is skipped when the left side is false.
+- `get()` also returns `None` for a present key holding `None`, unless a different fallback is specified.
