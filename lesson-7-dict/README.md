@@ -24,7 +24,7 @@ Dictionaries are useful for fast lookups by key; lists are better for sequences 
 ## Reference
 Run from the repository root:
 ```bash
-python day-7/07_dictionaries.py
+python lesson-7-dict/07_dictionaries.py
 ```
 
 Expected:
