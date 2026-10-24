@@ -42,3 +42,7 @@ No dependencies.
 
 ## Learning notes
 The learner used a `for` loop to accumulate the total of `[143, 26, 32, 43, 200]` (= `444`), printed the values, appended `33`, and counted 6 items. That correctly demonstrates iteration, list mutation, and length. The full exercise is optional when the learner demonstrates confidence; the repository reference and learning notes must still be complete.
+
+## Important line notes
+
+- `append()` modifies a list, `[-1]` retrieves its last element, and `sum()/len()` computes the average.
