@@ -10,8 +10,8 @@ This is the **curriculum skeleton**, not a claim that future lessons are impleme
 | 1 | Syntax and variables | indentation, comments, assignment, print | Completed |
 | 2 | Data types | str, int, float, bool, conversion, f-strings | Completed |
 | 3 | Operators and branching | arithmetic, remainder, comparison, and/or/not, if/else | Completed |
-| 4 | Functions | def, parameters, return, scope basics | Advanced |
-| 5 | Loops | range, for, while, break, continue | Advanced |
+| 4 | Functions | def, parameters, return, scope basics | Completed |
+| 5 | Loops | range, for, while, break, continue | Completed |
 | 6 | Lists | indexing, append, iteration, len, sum | Completed |
 | 7 | Dictionaries | key/value access, get, update, items | Active: PR #11 |
 | 8 | Tuples and sets | immutability, uniqueness, membership, set operations | Planned |
