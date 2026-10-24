@@ -1,0 +1,31 @@
+# Lesson 12: Exception handling
+
+## Objective
+Handle expected failures without hiding unexpected bugs.
+
+## Concepts
+- `try` contains operations that might fail.
+- `except ValueError` catches a specific invalid-value error.
+- `except ZeroDivisionError` catches division by zero.
+- `else` runs only if `try` finishes without an exception.
+- `finally` runs whether or not an exception occurs.
+- `raise` reports an error to the caller.
+
+## Reference
+Run `python lesson-12-except/12_exceptions.py`.
+
+```text
+Result: 5.0
+Invalid number: abc
+Cannot divide by zero
+Cleanup complete
+```
+
+## Important lines explained
+- `int(raw)`: Converts text to an integer; invalid input raises `ValueError`.
+- `except ValueError:`: Handles only the expected conversion error rather than catching every failure.
+- `finally:`: Runs cleanup code even if the operation fails.
+
+**Trade-off:** Catch specific exceptions, and avoid silent `except: pass` blocks that hide defects.
+
+See [DIY](diy.md) and [reference implementation](12_exceptions.py). No extra packages.
