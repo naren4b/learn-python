@@ -27,7 +27,7 @@ Read [diy.md](diy.md). Run `bash diy.sh` to start local practice. Reference: [08
 
 Run the example from the repository root:
 ```bash
-python day-8/08_tuples_sets.py
+python lesson-8-sets/08_tuples_sets.py
 ```
 
 Expected:
