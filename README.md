@@ -35,7 +35,7 @@ If you use a different local checkout location, change only the `cd` command. No
 3. Change the program as suggested in the exercise. Save and run again. Ask questions and mark the lesson finished before the next PR is merged.
 4. Explain what changed and check the output before moving to the next day.
 
-Each day contains one short `README.md`, a `diy.md` with the fixed local `app.py` workflow, one runnable reference Python file, and `requirements.txt` (with no dependencies when none are needed). Extra packages, where required, will be explained in that day's README.
+Each lesson contains one short `README.md`, a `diy.md` with the fixed local `app.py` workflow, one runnable reference Python file, and `requirements.txt` (with no dependencies when none are needed). Extra packages, where required, will be explained in that day's README.
 
 ## Complete refresher roadmap
 
@@ -55,8 +55,9 @@ See [Python refresher roadmap](curriculum/README.md) for the core Python, practi
 | [Day 7](day-7/README.md) | Dictionaries and key-value data | Completed |
 | [Day 8](day-8/README.md) | Tuples and sets | Reference merged; practice not submitted |
 | [Day 9](day-9/README.md) | Strings and text processing | Completed |
-| [Day 10](day-10/README.md) | Collections, sorting and comprehensions | In progress (PR open) |
-| Day 11+ | Functions, exceptions, files, APIs, tests and coding exercises | [Planned topics](curriculum/README.md) |
+| [Day 10](day-10/README.md) | Collections, sorting and comprehensions | Completed |
+| [Lesson 11](lesson-11-func-args/README.md) | Functions and arguments | Current lesson (reference prepared) |
+| Lesson 12+ | Exceptions, files, APIs, tests and coding exercises | [Planned topics](curriculum/README.md) |
 | Later | Easy and medium coding exercises | Planned |
 
 Practice one topic at a time. The maintainer prepares reference code and documentation on a task branch. Learners do not need to commit their practice code. Lessons are merged to `main` once completed and reviewed.
