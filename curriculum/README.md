@@ -17,20 +17,18 @@ This is the **curriculum skeleton**, not a claim that future lessons are impleme
 | 8 | Tuples and sets | immutability, uniqueness, membership, set operations | Reference merged |
 | 9 | Strings | slicing, split/join, strip, replace, find, formatting | Completed |
 | 10 | Collections and comprehensions | slicing, sorting, list/dict/set comprehensions | Completed |
-| 11 | Functions and arguments | def, return vs print, defaults, positional and keyword arguments, *args/**kwargs, lambda, local/global scope | Reference merged |
+| 11 | Functions and arguments | def, return vs print, defaults, *args/**kwargs, lambda, local/global scope | Reference merged |
 | 12 | Exceptions | try/except/else/finally, raising errors | Reference merged |
-| 13 | File handling basics | with/open, read/write/append, encodings, pathlib, text files | Active |
-| 14 | CSV, JSON and YAML files | csv.reader/DictReader/DictWriter, json.load/dump, YAML safe_load/safe_dump with PyYAML, parsing and validation | Planned |
-| 15 | Modules and packages | import, __name__, pip/venv, requirements | Planned |
-| 16 | Classes and OOP basics | class, object, __init__, self, instance attributes, methods, encapsulation, inheritance, dataclasses | Planned |
-| 17 | Iterators and generators | iterable, yield, enumerate, zip | Planned |
-| 18 | Useful standard library | collections, itertools, datetime, re | Planned |
+| 13 | File handling basics | with/open, read/write/append, encodings, pathlib, text files | Practice complete; PR #19 open |
+| 14 | CSV, JSON and YAML files | csv.reader/DictReader/DictWriter, json.load/dump, YAML safe_load/safe_dump with PyYAML, parsing and validation | Completed |
+| 15 | Modules and packages | import, __name__, pip/venv, requirements | Completed |
+| 16 | Classes and OOP basics | class, object, __init__, self, instance attributes, methods, encapsulation, inheritance, dataclasses | Completed |
+| 17 | Iterators and generators | iterable, yield, enumerate, zip | Completed |
+| 18 | Useful standard library | collections, itertools, datetime, re | Completed |
 
 ## Specific refresh coverage
 
-- **Functions:** define/call functions, positional and keyword arguments (including named calls such as `f(qty=2)`), defaults, `*args` / `**kwargs`, return values, scope, and basic type annotations.
-- **Program input:** interactive `input()` (always returns `str`), conversions and validation in Lesson 19; command-line positional arguments (`sys.argv`) and named options (`argparse`, e.g. `--region eu-central-1`) in Lesson 19.
-- **Environment variables:** `os.environ`, `os.getenv`, safe defaults, and distinction from program arguments in Lesson 20. Never commit secrets or print sensitive environment values.
+- **Functions:** define/call functions, positional and keyword arguments, defaults, return values, scope, and basic type annotations.
 - **Classes/OOP:** instantiate objects, constructors (`__init__`), `self`, instance vs class attributes, instance methods, simple inheritance and composition.
 - **File handling:** use `with open(...)` and `pathlib.Path` for text files; read/write CSV with `csv`, JSON with `json`, and YAML with `PyYAML` (`yaml.safe_load` / `yaml.safe_dump`). Unlike CSV and JSON, YAML requires an external dependency recorded in `requirements.txt`.
 - Include small standalone exercises for **reading, modifying and writing each format**, including errors for missing or malformed files. Keep sample files generic and free of secrets.
@@ -39,13 +37,21 @@ This is the **curriculum skeleton**, not a claim that future lessons are impleme
 
 | Day | Topic | Refresh checklist |
 | --- | --- | --- |
-| 19 | CLI scripts | input() interactive variables, sys.argv, argparse positional and named flags, types, validation, exit codes, logging |
-| 20 | OS and subprocess | os.environ / os.getenv, defaults, subprocess, environment inheritance, secrets safety |
+| 19 | CLI scripts | sys.argv, argparse, os.getenv, input |
+| 20 | OS and subprocess | os, environment variables, subprocess, safety |
+| 20A | NumPy foundations (supplement) | ndarray, shapes, slicing, vectorized operations, basic statistics; install with uv |
+| 20B | Pandas foundations (supplement) | DataFrames, CSV/JSON, filtering, groupby, join/merge; install with uv |
 | 21 | HTTP and APIs | requests or urllib, timeouts, status codes, parsing |
 | 22 | Unit tests | unittest/pytest, assertions, fixtures, mocks |
-| 23 | Type hints and clean code | annotations, linting, readability, error handling |
-| 24 | Concurrency basics | threads, asyncio, when not to use them |
-| 25 | Mini project | input → processing → output, validation, tests |
+| 23 | Type hints and clean code (skipped) | annotations, linting, readability, error handling |
+| 24 | Concurrency basics (skipped) | threads, asyncio, when not to use them |
+| 25 | Boto3 for AWS automation | sessions, profile/region, STS identity, read-only EC2 inventory, SDK pagination |
+| 26 | Kubernetes Python client | kubeconfig, list namespaces/pods, API errors, safe read-only automation |
+| 27 | Advanced JSON and YAML data processing | nested structures, filtering, searching, validating, modifying and rewriting configuration files |
+| 28 | Timestamp-based log analysis | streaming large text logs, datetime/timezones, severity filters, date ranges, keyword and regex searching |
+| 29 | Structured log analytics | JSON Lines, error counts, grouping by service, top recurring errors and CSV reporting |
+| 30 | DevOps automation mini-project | YAML configuration, Kubernetes inventory, log analysis and JSON/CSV reporting |
+| Later | Mini project | input → processing → output, validation, tests |
 
 ## Track C: Coding interview drills
 
@@ -78,7 +84,7 @@ learn-python/
 
 ## Publishing and progress rules
 
-- Only create a new `lesson-N-abbr/` directory when preparing that day's lesson, so planned days cannot be mistaken for finished reference implementations.
+- Only create a new `day-N/` directory when preparing that day's lesson, so planned days cannot be mistaken for finished reference implementations.
 - The maintainer creates a new branch and PR, fills all four lesson files, and updates the learning index.
 - Keep the current PR open until the learner says `next` or `lesson completed`.
 - Record learner questions that add useful knowledge. Full exercise completion is optional when competence is demonstrated.
