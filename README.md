@@ -61,8 +61,11 @@ See [Python refresher roadmap](curriculum/README.md) for the core Python, practi
 | Lesson 13 | Text file handling | Practice complete; [PR #19](https://github.com/naren4b/learn-python/pull/19) pending merge |
 | [Lesson 14](lesson-14-data/README.md) | CSV, JSON and YAML | Completed |
 | [Lesson 15](lesson-15-modules/README.md) | Modules, packages and imports | Completed |
-| [Lesson 16](lesson-16-oop/README.md) | Classes and OOP | Current lesson (PR open) |
-| Lesson 17+ | Iterators, APIs and tests | [Planned topics](curriculum/README.md) |
+| [Lesson 16](lesson-16-oop/README.md) | Classes and OOP | Completed |
+| [Lesson 17](lesson-17-iter-gen/README.md) | Iterators and generators | Completed |
+| [Lesson 18](lesson-18-stdlib/README.md) | Standard library | Completed |
+| [Lesson 19](lesson-19-cli/README.md) | Command-line input and argparse | Current lesson (PR open) |
+| Lesson 20+ | Environment variables, NumPy, Pandas, APIs and tests | [Planned topics](curriculum/README.md) |
 | Later | Easy and medium coding exercises | Planned |
 
 Practice one topic at a time. The maintainer prepares reference code and documentation on a task branch. Learners do not need to commit their practice code. Lessons are merged to `main` once completed and reviewed.
