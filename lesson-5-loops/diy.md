@@ -23,3 +23,7 @@ PRINT Done
 5. Change the sum's upper limit to 10 and check the new total.
 
 Use [the reference code](05_loops.py) only if stuck. Do not commit your local practice files.
+
+## Optional: enumerate
+
+Loop through `["api", "db", "cache"]` with `enumerate(..., start=1)` and print the position and the service name.

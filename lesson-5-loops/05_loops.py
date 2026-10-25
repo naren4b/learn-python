@@ -11,3 +11,8 @@ while count > 0:
     print(f"Countdown: {count}")
     count -= 1
 print("Done")
+
+# enumerate returns (index, value) pairs; start=1 numbers from one.
+services = ["api", "db", "cache"]
+for line_number, service in enumerate(services, start=1):
+    print(f"{line_number}: {service}")
