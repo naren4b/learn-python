@@ -1,22 +1,27 @@
-"""Lesson 20: execute Bash and parse JSON output into a dict."""
+"""Lesson 20: inspect Docker's JSON Lines output as Python dictionaries."""
 
 import json
 import subprocess
-from pathlib import Path
 
 
 def main() -> None:
-    script = Path(__file__).with_name("status.sh")
-    result = subprocess.run(
-        ["bash", str(script)],
-        capture_output=True,
-        text=True,
-        check=True,
-        timeout=10,
-    )
-    status = json.loads(result.stdout)
-    print("Parsed:", status)
-    print(f"Service: {status['service']}, status: {status['status']}")
+    try:
+        result = subprocess.run(
+            ["docker", "ps", "--format", "{{json .}}"],
+            capture_output=True,
+            text=True,
+            check=True,
+            timeout=10,
+        )
+    except (FileNotFoundError, subprocess.CalledProcessError,
+            subprocess.TimeoutExpired) as error:
+        print(f"Could not list Docker containers: {error}")
+        return
+
+    containers = [json.loads(line) for line in result.stdout.splitlines()]
+    print(f"Running containers: {len(containers)}")
+    for container in containers:
+        print(container.get("Names"), container.get("Status"))
 
 
 if __name__ == "__main__":
