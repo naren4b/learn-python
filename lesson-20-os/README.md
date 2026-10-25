@@ -1,55 +1,49 @@
-# Lesson 20 — Execute Bash scripts and collect structured results
+# Lesson 20 — Run Bash commands and inspect Docker containers
 
 ## Goal
 
-Execute a Bash script from Python and turn its output into a Python dictionary.
+Run a real command from Python, capture its output, and inspect structured results.
 
-We covered reading environment variables in [Lesson 19](../lesson-19-cli/README.md). Here we focus on using `subprocess` to connect Bash and Python.
+This lesson uses **`docker ps`** rather than `systemctl status docker`: Docker supports machine-readable output, while the default `systemctl status` text is intended for people.
 
-## Approach: Bash emits JSON, Python loads a dictionary
-
-**Bash (`status.sh`)**
+## Bash command
 
 ```bash
-#!/usr/bin/env bash
-set -euo pipefail
-printf '{"service":"api","status":"healthy","port":8080}\n'
+docker ps --format '{{json .}}'
 ```
 
-**Python**
+Docker prints **one JSON object per running container** (JSON Lines), not one JSON array. With no running containers, output is empty.
+
+## Python example
 
 ```python
 import json
 import subprocess
 
 result = subprocess.run(
-    ["bash", "status.sh"],
+    ["docker", "ps", "--format", "{{json .}}"],
     capture_output=True,
     text=True,
     check=True,
     timeout=10,
 )
-status = json.loads(result.stdout)  # JSON object -> Python dict
-print(status["service"], status["status"])
+
+containers = [json.loads(line) for line in result.stdout.splitlines()]
+print("Running containers:", len(containers))
+for container in containers:
+    print(container.get("Names"), container.get("Status"))
 ```
 
-## Key points
+Each line becomes a Python **dictionary**, and `containers` is a **list of dictionaries**.
 
-- `subprocess.run(["bash", "status.sh"])` runs the script and waits for completion.
+## Important details
+
+- `subprocess.run()` runs Docker directly; a separate Bash script is optional.
 - `capture_output=True` collects stdout and stderr separately.
-- `text=True` returns strings, not bytes.
-- `check=True` raises `CalledProcessError` on nonzero exit.
-- `json.loads(result.stdout)` parses valid JSON into a dict (when Bash emits a JSON object).
-- Keep stdout **JSON-only**. Send diagnostics to stderr: `echo "debug" >&2`.
-- Use `json.loads` instead of manually splitting output. Invalid JSON raises `JSONDecodeError`.
-- Use argument lists, not `shell=True`, and set a timeout for external processes.
-- For real scripts, construct JSON safely (e.g. with `jq -n --arg`) rather than interpolating untrusted values inside JSON.
+- `check=True` raises `CalledProcessError` if Docker exits unsuccessfully.
+- `json.loads(line)` parses one JSON object; `json.loads(result.stdout)` would fail when multiple JSON lines are present.
+- `docker ps` shows running containers; `docker ps -a` includes stopped containers.
+- On machines without Docker or daemon access, the command fails. On Podman-based WSL, use the equivalent `podman ps --format '{{json .}}'` but note output formats can differ.
+- Do not infer container health from `Status` alone; Docker health-check state is separate.
 
-Run the reference from this folder:
-
-```bash
-cd lesson-20-os
-python 20_os_subprocess.py
-```
-
-[DIY](diy.md) · [Python reference](20_os_subprocess.py) · [Bash reference](status.sh) · [Python subprocess docs](https://docs.python.org/3.12/library/subprocess.html) · [JSON docs](https://docs.python.org/3.12/library/json.html)
+[DIY](diy.md) · [Python reference](20_os_subprocess.py) · [Bash reference](status.sh) · [Python subprocess docs](https://docs.python.org/3.12/library/subprocess.html) · [Docker ps docs](https://docs.docker.com/reference/cli/docker/container/ls/)
