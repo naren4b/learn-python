@@ -102,6 +102,22 @@ The reference creates temporary example files, reads them back and cleans up aut
 
 **Remember:** Dictionaries add or update keys; lists use `.append()`. For JSON and YAML, normally **load → modify → write the entire updated object**. For CSV, append rows using `"a"` and avoid writing the header again.
 
+## Working pattern: read → parse → modify → save
+
+Use the parsed **Python objects**, not raw file text:
+
+1. Read the file and parse it into Python objects.
+2. Modify a `dict` with `data["key"] = value` or `update()`, or modify a `list` with `append()`.
+3. Write the complete updated object back to the file.
+
+| Format | Parsed data | Updating files |
+| --- | --- | --- |
+| JSON | Dictionary, list, or another JSON-compatible value | `json.load()` → modify → `json.dump()` |
+| YAML | Dictionary, list, or another supported YAML value | `yaml.safe_load()` → modify → `yaml.safe_dump()` |
+| CSV | Rows, commonly represented as dictionaries by `DictReader` | Read/modify/rewrite, **or append rows directly** with `DictWriter` and `"a"` |
+
+Use separate read and write file handles. Beware that opening with `"w"` replaces the existing file, and repeated appends may create duplicate records. For large CSV files, process rows incrementally.
+
 ## Official references
 
 [Python json](https://docs.python.org/3.12/library/json.html) · [Python csv](https://docs.python.org/3.12/library/csv.html) · [PyYAML documentation](https://pyyaml.org/wiki/PyYAMLDocumentation) · [pathlib](https://docs.python.org/3.12/library/pathlib.html)
