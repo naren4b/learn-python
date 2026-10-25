@@ -3,6 +3,23 @@
 ## Goal
 Safely read, write and append text using `pathlib.Path` and `with open()`.
 
+## Simplest example: read a local file
+
+Create `services.txt` in the directory where you run Python:
+
+```text
+api
+db
+cache
+```
+
+```python
+with open("services.txt", "r", encoding="utf-8") as file:
+    print(file.read())
+```
+
+`"r"` means read-only. `with` closes the file automatically. A relative filename is resolved from the **current working directory**, not necessarily the script's directory. Run it from the same folder as `services.txt`.
+
 ## Main concepts
 - `Path("notes.txt")` describes a filesystem path.
 - `with path.open("w", encoding="utf-8") as file:` opens for writing, overwrites existing content, and closes automatically.
