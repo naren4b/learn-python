@@ -1,22 +1,16 @@
-"""Lesson 20: environment settings and safe subprocess calls."""
+"""Lesson 20: safely execute external processes."""
 
-import os
 import subprocess
 import sys
-from pathlib import Path
 
 
 def main() -> None:
-    env_name = os.getenv("APP_ENV", "dev")
-    print("Environment:", env_name)
-    print("Working directory:", Path.cwd())
-
     result = subprocess.run(
-        [sys.executable, "--version"],  # Avoid shell commands for simple executions.
-        capture_output=True,
-        text=True,
-        check=True,  # Raise if the command fails.
-        timeout=10,  # Avoid hanging indefinitely.
+        [sys.executable, "--version"],  # Executable and arguments are separate items.
+        capture_output=True,  # Capture stdout and stderr.
+        text=True,  # Decode output to str.
+        check=True,  # Raise CalledProcessError on nonzero exit.
+        timeout=10,  # Raise TimeoutExpired if the command hangs.
     )
     print("Version:", (result.stdout or result.stderr).strip())
     print("Return code:", result.returncode)
