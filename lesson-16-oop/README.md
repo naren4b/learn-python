@@ -18,7 +18,7 @@ server = Server("api", 8080)
 print(server.describe())
 ```
 
-Output: `api:8080`
+Output: `api:8080` (the reference also prints `cache:6379`).
 
 ## Important syntax
 
@@ -27,8 +27,8 @@ Output: `api:8080`
 - `self` refers to the current instance.
 - `self.name` stores a value on that instance.
 - An instance method accesses object data through `self`.
-- `super()` calls methods inherited from a parent class.
-- `@dataclass` generates boilerplate for classes that mainly hold data.
+- `super()` calls inherited methods (introduced here; practiced later).
+- `@dataclass` generates boilerplate for data-focused classes (practiced later).
 
 See [DIY](diy.md) and [reference code](16_oop.py). No external dependencies.
 
