@@ -2,22 +2,31 @@
 
 Learn Python by writing and running small programs. Start with Day 0 and follow the lessons in order. This repository is generic and open to anyone.
 
-## Python setups: choose the simplest that fits
+## Setup (Windows + WSL + Podman)
 
-| Setup | When to use | Trade-off |
-| --- | --- | --- |
-| Installed Python + standard library | **Start here for learning**; run `python lab/app.py` | No dependency isolation; avoid modifying OS-managed packages |
-| `venv` + `pip` | Lightweight project isolation without extra tooling | Each project manages its own environment |
-| `uv` + project virtual environment | **Recommended for everyday development** with external dependencies | Small upfront workflow change; maintains a shared package cache |
-| Podman container | Reproducible, isolated runtime when needed | Container image and runtime overhead |
+Requirements: WSL and Python 3.12 for hands-on practice, plus a text editor such as `vi`. Podman is optional for isolated runs with the pinned Python 3.12.14 image.
 
-**Learning setup (recommended first):** Use an already installed Python 3.12 and an editor. From the repository root run `bash diy.sh`, then `python lab/app.py`. Standard-library modules such as `pathlib` and `tempfile` need no installation. Do not upgrade or install packages into an OS-managed Python just for these lessons.
+Open WSL and use your existing checkout:
 
-**Everyday project setup (recommended):** Use `uv` with a project-specific `.venv` and declared dependencies. For a new project, `uv init`, `uv add requests`, and `uv run python main.py` provide a straightforward managed workflow. `uv` uses a shared package cache, reducing repeated downloads and potentially saving storage via links when the cache and environment are on compatible filesystems.
+```bash
+cd /mnt/c/code/personal/learn-python
+git pull --ff-only origin main
+podman run --rm docker.io/library/python:3.12.14-slim-bookworm python --version
+```
 
-**Alternative:** Use `python -m venv .venv`, activate it, then `python -m pip install -r requirements.txt`. For containers, a Python 3.12 image under Podman is optional.
+Expected: `Python 3.12.14`.
 
-**Where imports come from:** Python searches locations in `sys.path`, including the script directory, standard library and environment-specific `site-packages` (or Debian/Ubuntu `dist-packages`). `python -m pip show <package>` reports an installed package's location; `import package; print(package.__file__)` shows its module file. `sys.prefix == sys.base_prefix` generally indicates the interpreter is not in a `venv`. Use `python -m pip` rather than an ambiguous standalone `pip` command when working with pip.
+Run a lesson from the repository root:
+
+```bash
+podman run --rm -v "$PWD:/work" -w /work \
+  docker.io/library/python:3.12.14-slim-bookworm \
+  python lesson-0-hello/00_hello.py
+```
+
+Expected: `Hello, Python!`
+
+If you use a different local checkout location, change only the `cd` command. No extra working directory is needed.
 
 ## How to learn
 
@@ -49,8 +58,21 @@ See [Python refresher roadmap](curriculum/README.md) for the core Python, practi
 | [Day 10](lesson-10-comp/README.md) | Collections, sorting and comprehensions | Completed |
 | [Lesson 11](lesson-11-func-args/README.md) | Functions and arguments | Reference merged; practice reviewed |
 | [Lesson 12](lesson-12-except/README.md) | Exception handling | Reference merged |
-| [Lesson 13](lesson-13-files/README.md) | Text file handling | Current lesson (PR open) |
-| Lesson 14+ | CSV, JSON, YAML, APIs and tests | [Planned topics](curriculum/README.md) |
+| Lesson 13 | Text file handling | Practice complete; [PR #19](https://github.com/naren4b/learn-python/pull/19) pending merge |
+| [Lesson 14](lesson-14-data/README.md) | CSV, JSON and YAML | Completed |
+| [Lesson 15](lesson-15-modules/README.md) | Modules, packages and imports | Completed |
+| [Lesson 16](lesson-16-oop/README.md) | Classes and OOP | Completed |
+| [Lesson 17](lesson-17-iter-gen/README.md) | Iterators and generators | Completed |
+| [Lesson 18](lesson-18-stdlib/README.md) | Standard library | Completed |
+| [Lesson 19](lesson-19-cli/README.md) | sys, argparse and os inputs | Completed |
+| [Lesson 20](lesson-20-os/README.md) | Bash/Docker subprocess and JSON | Completed |
+| [Lesson 21](lesson-21-apis/README.md) | HTTP APIs and pagination | Completed |
+| [Lesson 22](lesson-22-tests/README.md) | Unit testing | Practice skipped; PR #29 open |
+| [Lesson 23](lesson-23-types/README.md) | Type hints | Skipped; PR #30 open |
+| Lesson 24 | Concurrency | Skipped |
+| [Lesson 25](lesson-25-boto3/README.md) | AWS automation with Boto3 | Completed |
+| [Lesson 26](lesson-26-k8s/README.md) | Kubernetes Python client | Current lesson (PR open) |
+| Later | NumPy, Pandas and coding exercises | Planned |
 | Later | Easy and medium coding exercises | Planned |
 
 Practice one topic at a time. The maintainer prepares reference code and documentation on a task branch. Learners do not need to commit their practice code. Lessons are merged to `main` once completed and reviewed.
