@@ -1,16 +1,12 @@
 # Lesson 20 — DIY
 
-Use your local `lab/app.py`.
+Use the existing `lab/app.py`.
 
 ## Your Exercise
 
-1. Read `APP_ENV` with `os.getenv("APP_ENV", "dev")`.
-2. Print the current working directory with `Path.cwd()`.
-3. Run `[sys.executable, "--version"]` using `subprocess.run()` with `capture_output=True`, `text=True`, `check=True`, and `timeout=10`.
-4. Print the captured output and process return code.
+1. Run the current Python interpreter with `--version` using `subprocess.run()`.
+2. Set `capture_output=True`, `text=True`, `check=True` and `timeout=10`.
+3. Print its stdout/stderr and return code.
+4. Run an invalid command argument and catch `subprocess.CalledProcessError`.
 
-Try `APP_ENV=prod python lab/app.py` and compare it to the default.
-
-## Pseudocode
-
-Read setting; locate working directory; run safe subprocess; inspect output and exit status.
+Avoid `shell=True`. Refer to [Lesson 19](../lesson-19-cli/README.md) for environment variables.
