@@ -1,12 +1,13 @@
-# Lesson 20 — DIY
+# Lesson 20 — DIY: Bash output into a Python dict
 
-Use the existing `lab/app.py`.
+Use your existing `lab/app.py`.
 
 ## Your Exercise
 
-1. Run the current Python interpreter with `--version` using `subprocess.run()`.
-2. Set `capture_output=True`, `text=True`, `check=True` and `timeout=10`.
-3. Print its stdout/stderr and return code.
-4. Run an invalid command argument and catch `subprocess.CalledProcessError`.
+1. Create `lab/status.sh` that prints one JSON object containing a service name, status and port.
+2. In `lab/app.py`, run the script using `subprocess.run(["bash", "lab/status.sh"], capture_output=True, text=True, check=True)`.
+3. Convert `result.stdout` into a dictionary using `json.loads()`.
+4. Print the service name and status from the dictionary.
+5. Optional: test what happens when the script prints invalid JSON.
 
-Avoid `shell=True`. Refer to [Lesson 19](../lesson-19-cli/README.md) for environment variables.
+**Reminder:** Bash stdout should contain only JSON; write logs and errors to stderr.
