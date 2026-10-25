@@ -70,8 +70,8 @@ See [Python refresher roadmap](curriculum/README.md) for the core Python, practi
 | [Lesson 22](lesson-22-tests/README.md) | Unit testing | Practice skipped; PR #29 open |
 | [Lesson 23](lesson-23-types/README.md) | Type hints | Skipped; PR #30 open |
 | Lesson 24 | Concurrency | Skipped |
-| [Lesson 25](lesson-25-boto3/README.md) | AWS automation with Boto3 | Current lesson (PR open) |
-| Lesson 26 | Kubernetes Python client | Next |
+| [Lesson 25](lesson-25-boto3/README.md) | AWS automation with Boto3 | Completed |
+| [Lesson 26](lesson-26-k8s/README.md) | Kubernetes Python client | Current lesson (PR open) |
 | Later | NumPy, Pandas and coding exercises | Planned |
 | Later | Easy and medium coding exercises | Planned |
 
