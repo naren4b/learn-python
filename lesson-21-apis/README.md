@@ -61,6 +61,40 @@ for page in range(1, 101):  # Safety cap; avoid unbounded loops
 
 This is a **schema illustration**, not a runnable public endpoint. Follow server-provided `next` URLs/cursors when available; handle HTTP 429 rate limits and retries, and don't assume every API uses `has_more`.
 
+## Practical pagination: DummyJSON products
+
+[DummyJSON products pagination](https://dummyjson.com/docs/products#products-limit_skip) supports `limit`, `skip` and comma-separated `select` fields. Its response contains `products`, `total`, `skip` and `limit`.
+
+```python
+import json
+from urllib.parse import urlencode
+from urllib.request import urlopen
+
+products = []
+limit = 10
+skip = 0
+
+while True:
+    query = urlencode({"limit": limit, "skip": skip, "select": "title,price"})
+    with urlopen(f"https://dummyjson.com/products?{query}", timeout=10) as response:
+        payload = json.load(response)
+
+    batch = payload["products"]  # List of dictionaries
+    products.extend(batch)       # Add entries, not a nested list
+    skip += len(batch)            # Advance by the actual number received
+
+    if not batch or skip >= payload["total"]:
+        break
+
+print("Collected:", len(products))
+```
+
+- `limit=10`: request up to 10 products; `skip=10`: skip the first 10.
+- `select=title,price`: request only relevant fields (the API may also return identifiers).
+- `limit=0` fetches all items on DummyJSON, but defeats the purpose of practicing pagination.
+- The stop condition uses the API's `total` field, rather than assuming a `has_more` field.
+- For real APIs, read the specific pagination contract, use timeouts, and handle failures.
+
 ## Key concepts
 
 | Concept | Meaning |
