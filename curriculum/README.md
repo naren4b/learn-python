@@ -20,8 +20,8 @@ This is the **curriculum skeleton**, not a claim that future lessons are impleme
 | 11 | Functions and arguments | def, return vs print, defaults, *args/**kwargs, lambda, local/global scope | Reference merged |
 | 12 | Exceptions | try/except/else/finally, raising errors | Reference merged |
 | 13 | File handling basics | with/open, read/write/append, encodings, pathlib, text files | Practice complete; PR #19 open |
-| 14 | CSV, JSON and YAML files | csv.reader/DictReader/DictWriter, json.load/dump, YAML safe_load/safe_dump with PyYAML, parsing and validation | Current |
-| 15 | Modules and packages | import, __name__, pip/venv, requirements | Planned |
+| 14 | CSV, JSON and YAML files | csv.reader/DictReader/DictWriter, json.load/dump, YAML safe_load/safe_dump with PyYAML, parsing and validation | Completed |
+| 15 | Modules and packages | import, __name__, pip/venv, requirements | Active |
 | 16 | Classes and OOP basics | class, object, __init__, self, instance attributes, methods, encapsulation, inheritance, dataclasses | Planned |
 | 17 | Iterators and generators | iterable, yield, enumerate, zip | Planned |
 | 18 | Useful standard library | collections, itertools, datetime, re | Planned |
