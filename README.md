@@ -2,31 +2,22 @@
 
 Learn Python by writing and running small programs. Start with Day 0 and follow the lessons in order. This repository is generic and open to anyone.
 
-## Setup (Windows + WSL + Podman)
+## Python setups: choose the simplest that fits
 
-Requirements: WSL and Python 3.12 for hands-on practice, plus a text editor such as `vi`. Podman is optional for isolated runs with the pinned Python 3.12.14 image.
+| Setup | When to use | Trade-off |
+| --- | --- | --- |
+| Installed Python + standard library | **Start here for learning**; run `python lab/app.py` | No dependency isolation; avoid modifying OS-managed packages |
+| `venv` + `pip` | Lightweight project isolation without extra tooling | Each project manages its own environment |
+| `uv` + project virtual environment | **Recommended for everyday development** with external dependencies | Small upfront workflow change; maintains a shared package cache |
+| Podman container | Reproducible, isolated runtime when needed | Container image and runtime overhead |
 
-Open WSL and use your existing checkout:
+**Learning setup (recommended first):** Use an already installed Python 3.12 and an editor. From the repository root run `bash diy.sh`, then `python lab/app.py`. Standard-library modules such as `pathlib` and `tempfile` need no installation. Do not upgrade or install packages into an OS-managed Python just for these lessons.
 
-```bash
-cd /mnt/c/code/personal/learn-python
-git pull --ff-only origin main
-podman run --rm docker.io/library/python:3.12.14-slim-bookworm python --version
-```
+**Everyday project setup (recommended):** Use `uv` with a project-specific `.venv` and declared dependencies. For a new project, `uv init`, `uv add requests`, and `uv run python main.py` provide a straightforward managed workflow. `uv` uses a shared package cache, reducing repeated downloads and potentially saving storage via links when the cache and environment are on compatible filesystems.
 
-Expected: `Python 3.12.14`.
+**Alternative:** Use `python -m venv .venv`, activate it, then `python -m pip install -r requirements.txt`. For containers, a Python 3.12 image under Podman is optional.
 
-Run a lesson from the repository root:
-
-```bash
-podman run --rm -v "$PWD:/work" -w /work \
-  docker.io/library/python:3.12.14-slim-bookworm \
-  python lesson-0-hello/00_hello.py
-```
-
-Expected: `Hello, Python!`
-
-If you use a different local checkout location, change only the `cd` command. No extra working directory is needed.
+**Where imports come from:** Python searches locations in `sys.path`, including the script directory, standard library and environment-specific `site-packages` (or Debian/Ubuntu `dist-packages`). `python -m pip show <package>` reports an installed package's location; `import package; print(package.__file__)` shows its module file. `sys.prefix == sys.base_prefix` generally indicates the interpreter is not in a `venv`. Use `python -m pip` rather than an ambiguous standalone `pip` command when working with pip.
 
 ## How to learn
 
