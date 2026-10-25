@@ -43,9 +43,11 @@ This is the **curriculum skeleton**, not a claim that future lessons are impleme
 | 20B | Pandas foundations (supplement) | DataFrames, CSV/JSON, filtering, groupby, join/merge; install with uv |
 | 21 | HTTP and APIs | requests or urllib, timeouts, status codes, parsing |
 | 22 | Unit tests | unittest/pytest, assertions, fixtures, mocks |
-| 23 | Type hints and clean code | annotations, linting, readability, error handling |
-| 24 | Concurrency basics | threads, asyncio, when not to use them |
-| 25 | Mini project | input → processing → output, validation, tests |
+| 23 | Type hints and clean code (skipped) | annotations, linting, readability, error handling |
+| 24 | Concurrency basics (skipped) | threads, asyncio, when not to use them |
+| 25 | Boto3 for AWS automation | sessions, profile/region, STS identity, read-only EC2 inventory, SDK pagination |
+| 26 | Kubernetes Python client | kubeconfig, list namespaces/pods, API errors, safe read-only automation |
+| Later | Mini project | input → processing → output, validation, tests |
 
 ## Track C: Coding interview drills
 
