@@ -64,8 +64,15 @@ See [Python refresher roadmap](curriculum/README.md) for the core Python, practi
 | [Lesson 16](lesson-16-oop/README.md) | Classes and OOP | Completed |
 | [Lesson 17](lesson-17-iter-gen/README.md) | Iterators and generators | Completed |
 | [Lesson 18](lesson-18-stdlib/README.md) | Standard library | Completed |
-| [Lesson 19](lesson-19-cli/README.md) | Command-line input and argparse | Current lesson (PR open) |
-| Lesson 20+ | Environment variables, NumPy, Pandas, APIs and tests | [Planned topics](curriculum/README.md) |
+| [Lesson 19](lesson-19-cli/README.md) | sys, argparse and os inputs | Completed |
+| [Lesson 20](lesson-20-os/README.md) | Bash/Docker subprocess and JSON | Completed |
+| [Lesson 21](lesson-21-apis/README.md) | HTTP APIs and pagination | Completed |
+| [Lesson 22](lesson-22-tests/README.md) | Unit testing | Practice skipped; PR #29 open |
+| [Lesson 23](lesson-23-types/README.md) | Type hints | Skipped; PR #30 open |
+| Lesson 24 | Concurrency | Skipped |
+| [Lesson 25](lesson-25-boto3/README.md) | AWS automation with Boto3 | Current lesson (PR open) |
+| Lesson 26 | Kubernetes Python client | Next |
+| Later | NumPy, Pandas and coding exercises | Planned |
 | Later | Easy and medium coding exercises | Planned |
 
 Practice one topic at a time. The maintainer prepares reference code and documentation on a task branch. Learners do not need to commit their practice code. Lessons are merged to `main` once completed and reviewed.
