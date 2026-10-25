@@ -19,6 +19,16 @@ while count <= 3:
     count += 1
 ```
 
+## Enumerate: counter and value together
+
+```python
+services = ["api", "db", "cache"]
+for line_number, service in enumerate(services, start=1):
+    print(line_number, service)
+```
+
+`enumerate(services, start=1)` produces pairs: `(1, "api")`, `(2, "db")`, `(3, "cache")`. The two loop variables unpack each pair. By default numbering starts at 0. This also works when iterating over lines in an open file, without reading the entire file at once.
+
 ## Important points
 - Indent loop bodies by four spaces.
 - Update the condition variable in a `while` loop to avoid an unintended infinite loop.
@@ -39,6 +49,9 @@ Countdown: 3
 Countdown: 2
 Countdown: 1
 Done
+1: api
+2: db
+3: cache
 ```
 
 Standard library only; no external dependencies.
