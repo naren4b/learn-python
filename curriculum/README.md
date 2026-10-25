@@ -37,7 +37,7 @@ This is the **curriculum skeleton**, not a claim that future lessons are impleme
 
 | Day | Topic | Refresh checklist |
 | --- | --- | --- |
-| 19 | CLI scripts | argparse, input, exit codes, logging |
+| 19 | CLI scripts | sys.argv, argparse, os.getenv, input |
 | 20 | OS and subprocess | os, environment variables, subprocess, safety |
 | 20A | NumPy foundations (supplement) | ndarray, shapes, slicing, vectorized operations, basic statistics; install with uv |
 | 20B | Pandas foundations (supplement) | DataFrames, CSV/JSON, filtering, groupby, join/merge; install with uv |
