@@ -1,19 +1,22 @@
-"""Lesson 20: safely execute external processes."""
+"""Lesson 20: execute Bash and parse JSON output into a dict."""
 
+import json
 import subprocess
-import sys
+from pathlib import Path
 
 
 def main() -> None:
+    script = Path(__file__).with_name("status.sh")
     result = subprocess.run(
-        [sys.executable, "--version"],  # Executable and arguments are separate items.
-        capture_output=True,  # Capture stdout and stderr.
-        text=True,  # Decode output to str.
-        check=True,  # Raise CalledProcessError on nonzero exit.
-        timeout=10,  # Raise TimeoutExpired if the command hangs.
+        ["bash", str(script)],
+        capture_output=True,
+        text=True,
+        check=True,
+        timeout=10,
     )
-    print("Version:", (result.stdout or result.stderr).strip())
-    print("Return code:", result.returncode)
+    status = json.loads(result.stdout)
+    print("Parsed:", status)
+    print(f"Service: {status['service']}, status: {status['status']}")
 
 
 if __name__ == "__main__":
