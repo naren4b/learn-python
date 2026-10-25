@@ -90,6 +90,18 @@ The reference creates temporary example files, reads them back and cleans up aut
 
 [Your exercise](diy.md) · [Reference code](14_data_formats.py)
 
+## JSON, YAML and CSV: updating existing data
+
+| Operation | JSON | YAML | CSV |
+| --- | --- | --- | --- |
+| Load data | `json.load(file)` | `yaml.safe_load(file)` | `csv.DictReader(file)` |
+| Add key to dictionary | `data["key"] = value` | Same Python dictionary operation | Same for a row dictionary |
+| Add record to list | `data.append(record)` | Same Python list operation | `writer.writerow(record)` |
+| Save changes | `json.dump(data, file)` | `yaml.safe_dump(data, file)` | `csv.DictWriter(file, ...)` |
+| Append directly to file | Generally no | Generally no | Yes, using `"a"` |
+
+**Remember:** Dictionaries add or update keys; lists use `.append()`. For JSON and YAML, normally **load → modify → write the entire updated object**. For CSV, append rows using `"a"` and avoid writing the header again.
+
 ## Official references
 
 [Python json](https://docs.python.org/3.12/library/json.html) · [Python csv](https://docs.python.org/3.12/library/csv.html) · [PyYAML documentation](https://pyyaml.org/wiki/PyYAMLDocumentation) · [pathlib](https://docs.python.org/3.12/library/pathlib.html)
