@@ -25,6 +25,33 @@ Run: `python app.py api --port 9090`
 
 Output: `api:9090`
 
+## Read environment variables
+
+Use `os.getenv()` for an optional variable or `os.environ["NAME"]` when a missing variable should raise `KeyError`.
+
+```python
+import os
+
+port = int(os.getenv("APP_PORT", "8080"))  # Default if unset
+token = os.environ.get("API_TOKEN")        # None if unset
+print(port)
+```
+
+In WSL, set and pass a variable to the Python process:
+
+```bash
+export APP_PORT=9090
+python lab/app.py
+# Or only for one command:
+APP_PORT=9090 python lab/app.py
+```
+
+- All environment variable values are strings; convert when needed.
+- `os.getenv("APP_PORT", "8080")` returns the default only when the variable is **unset**, not when it is an empty string.
+- Never print or commit credentials such as `API_TOKEN`.
+
+See [official `os.environ` documentation](https://docs.python.org/3.12/library/os.html#os.environ). Lesson 20 explores environment variables and subprocesses in depth.
+
 ## Important notes
 
 - `argparse` generates `--help` text automatically.
