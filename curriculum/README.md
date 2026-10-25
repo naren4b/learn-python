@@ -47,6 +47,10 @@ This is the **curriculum skeleton**, not a claim that future lessons are impleme
 | 24 | Concurrency basics (skipped) | threads, asyncio, when not to use them |
 | 25 | Boto3 for AWS automation | sessions, profile/region, STS identity, read-only EC2 inventory, SDK pagination |
 | 26 | Kubernetes Python client | kubeconfig, list namespaces/pods, API errors, safe read-only automation |
+| 27 | Advanced JSON and YAML data processing | nested structures, filtering, searching, validating, modifying and rewriting configuration files |
+| 28 | Timestamp-based log analysis | streaming large text logs, datetime/timezones, severity filters, date ranges, keyword and regex searching |
+| 29 | Structured log analytics | JSON Lines, error counts, grouping by service, top recurring errors and CSV reporting |
+| 30 | DevOps automation mini-project | YAML configuration, Kubernetes inventory, log analysis and JSON/CSV reporting |
 | Later | Mini project | input → processing → output, validation, tests |
 
 ## Track C: Coding interview drills
