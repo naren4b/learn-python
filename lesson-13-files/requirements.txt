@@ -1,0 +1,4 @@
+# No third-party packages required for Lesson 13.
+# Standard library: pathlib — construct paths; read and write files.
+# Standard library: tempfile — create temporary directories cleaned up after use.
+# These ship with Python; do not install them using pip.
