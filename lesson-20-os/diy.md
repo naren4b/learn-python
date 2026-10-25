@@ -1,13 +1,13 @@
-# Lesson 20 — DIY: Bash output into a Python dict
+# Lesson 20 — DIY
 
-Use your existing `lab/app.py`.
+Use your `lab/app.py`.
 
 ## Your Exercise
 
-1. Create `lab/status.sh` that prints one JSON object containing a service name, status and port.
-2. In `lab/app.py`, run the script using `subprocess.run(["bash", "lab/status.sh"], capture_output=True, text=True, check=True)`.
-3. Convert `result.stdout` into a dictionary using `json.loads()`.
-4. Print the service name and status from the dictionary.
-5. Optional: test what happens when the script prints invalid JSON.
+1. Run `docker ps --format '{{json .}}'` with `subprocess.run()`.
+2. Capture stdout with `capture_output=True`, `text=True` and `check=True`.
+3. Convert each nonempty stdout line into a dictionary with `json.loads()`.
+4. Print each container's name and status.
+5. Handle the case where no containers are running, and catch `FileNotFoundError` or `subprocess.CalledProcessError` if Docker is unavailable.
 
-**Reminder:** Bash stdout should contain only JSON; write logs and errors to stderr.
+If you use Podman, substitute `podman` for `docker` and check the output structure.
