@@ -11,3 +11,14 @@ Use `lab/app.py`.
 5. Optional: inspect an API's `next` cursor/URL rather than assuming page numbers.
 
 Reference endpoints, authentication safety, and a pagination example are explained in [README](README.md).
+
+## Pagination practice with a real API
+
+Use `https://dummyjson.com/products` with `limit=10`, `skip=0`, and `select=title,price`.
+
+1. Parse each response as JSON and read `products` and `total`.
+2. Collect batches with `all_products.extend(batch)`.
+3. Advance `skip` by the number received until `skip >= total` or a batch is empty.
+4. Print the total count and first product title.
+
+See the complete example in [README](README.md).
