@@ -10,3 +10,10 @@ Practice in your existing `lab/app.py` using `bash diy.sh`.
 4. Compare CLI arguments with environment variables; they are separate inputs.
 
 Try `APP_PORT=9090 python lab/app.py api` after adding the environment-variable example.
+
+## Supplement: interactive input and multiple values
+
+1. Prompt for a number using `input()` and convert it with `int()` inside a `try/except ValueError` loop.
+2. Guard `sys.argv[1]` with `len(sys.argv) > 1` before accessing it.
+3. Try `parser.add_argument("--service", action="append")` with repeated `--service` flags, and `nargs="+"` for multiple positional values.
+4. Test age `0` with `if args.age is not None` rather than `if args.age`.

@@ -78,3 +78,46 @@ All environment variable values are strings. The `os.getenv` default applies whe
 [DIY](diy.md) · [Reference](19_cli.py)
 
 Official docs: [sys.argv](https://docs.python.org/3.12/library/sys.html#sys.argv) · [argparse](https://docs.python.org/3.12/library/argparse.html) · [os.environ](https://docs.python.org/3.12/library/os.html#os.environ).
+
+## 4. Interactive input and safe validation
+
+`input(prompt)` reads a line from standard input during execution and **always returns a string**. Convert numbers explicitly and handle invalid text:
+
+```python
+while True:
+    try:
+        age = int(input("Enter your age: "))
+        break
+    except ValueError:
+        print("Enter a valid whole number.")
+print(age)
+```
+
+Unlike `sys.argv`, `input()` pauses to wait for user input. If standard input reaches EOF, `input()` raises `EOFError`.
+
+## 5. Guard raw arguments and accept multiple values
+
+```python
+import sys
+
+if len(sys.argv) > 1:
+    print(sys.argv[1])
+else:
+    print("Missing first argument")
+```
+
+For professional tools, `argparse` supports lists through `nargs` and repeated options through `action="append"`:
+
+```python
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("services", nargs="+")
+parser.add_argument("--tag", action="append", default=[])
+args = parser.parse_args()
+print(args.services, args.tag)
+```
+
+Example: `python app.py api metrics --tag prod --tag monitored`.
+
+When checking optional integer arguments, use `if args.age is not None:` instead of `if args.age:`; the latter treats `0` as false.
